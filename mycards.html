@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="mycards.css" />
+  </head>
+  <body>
+    <div class="my-cards">
+      <div class="overlap-wrapper">
+        <div class="overlap">
+          <div class="my-cards-wrapper">
+            <div class="div">
+              <div class="header">
+                <img class="logo" src="Images/draftdecklogo2.png" alt="DraftDeck Logo" />
+                <div class="text-wrapper">My Cards</div>
+                <a href="home.html"><img class="vector" src="Images/back-arrow.svg" /></a>
+              </div>
+
+              <!-- 🔹 FIXED: Display all 9 Cards -->
+              <div class="card-grid">
+                <div class="card-container"><div class="card"><div class="card-inner">
+                  <img class="front" src="Images/TradingCards/Lamar.png" />
+                  <img class="back" src="Images/TradingCards/Lamar_Back.png" />
+                </div></div></div>
+
+                <div class="card-container"><div class="card"><div class="card-inner">
+                  <img class="front" src="Images/TradingCards/Kamara_Card.png" />
+                  <img class="back" src="Images/TradingCards/Kamara_Back.png" />
+                </div></div></div>
+
+                <div class="card-container"><div class="card"><div class="card-inner">
+                  <img class="front" src="Images/TradingCards/Saquon_Card.png" />
+                  <img class="back" src="Images/TradingCards/Saquon_Back.png" />
+                </div></div></div>
+
+                <div class="card-container"><div class="card"><div class="card-inner">
+                  <img class="front" src="Images/TradingCards/Bijan_Card.png" />
+                  <img class="back" src="Images/TradingCards/Bijan_Back.png" />
+                </div></div></div>
+
+                <div class="card-container"><div class="card"><div class="card-inner">
+                  <img class="front" src="Images/TradingCards/Pickens_Card.png" />
+                  <img class="back" src="Images/TradingCards/Pickens_Back.png" />
+                </div></div></div>
+
+                <div class="card-container"><div class="card"><div class="card-inner">
+                  <img class="front" src="Images/TradingCards/Brian_Thomas_Card.png" />
+                  <img class="back" src="Images/TradingCards/Brian_Thomas_Back.png" />
+                </div></div></div>
+
+                <div class="card-container"><div class="card"><div class="card-inner">
+                  <img class="front" src="Images/TradingCards/AmonRa_Card.png" />
+                  <img class="back" src="Images/TradingCards/AmonRa_Back.png" />
+                </div></div></div>
+
+                <div class="card-container"><div class="card"><div class="card-inner">
+                  <img class="front" src="Images/TradingCards/Mahomes_card.png" />
+                  <img class="back" src="Images/TradingCards/Mahomes_Back.png" />
+                </div></div></div>
+
+                <div class="card-container"><div class="card"><div class="card-inner">
+                  <img class="front" src="Images/TradingCards/Jamarr_Card.png" />
+                  <img class="back" src="Images/TradingCards/Jamarr_Back.png" />
+                </div></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dark overlay for enlarged cards -->
+          <div class="overlay" id="overlay" onclick="closeCard()"></div>
+
+          <div class="menu-bar">
+            <img class="menu-img" src="Images/hamburger_menu.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="mycards.js"></script>
+  </body>
+</html>

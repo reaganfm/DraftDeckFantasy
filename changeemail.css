@@ -1,0 +1,151 @@
+/* Page Background */
+.change-email {
+  background-color: #16203d;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.change-email .div {
+  background-color: #16203d;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+/* Save New Email Button */
+.save-email-button {
+  position: absolute;
+  width: 394px;
+  height: 64px;
+  top: 646px;
+  left: 522px;
+  background-color: #fda311;
+  color: white;
+  font-family: "Istok Web-Bold", Helvetica;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-email-button:hover {
+  background-color: #e69510;
+}
+
+.save-email-button:focus {
+  outline: 3px solid white;
+  background-color: #cc850f;
+}
+
+/* Logo & Navigation */
+.change-email .overlap-group {
+  position: absolute;
+  width: 1440px;
+  height: 480px;
+  top: -155px;
+  left: 0;
+}
+
+.change-email .group {
+  position: absolute;
+  width: 1440px;
+  height: 480px;
+  top: 0;
+  left: 0;
+}
+
+.change-email .overlap-group-2 {
+  position: relative;
+  height: 325px;
+  top: 155px;
+}
+
+.change-email .frame {
+  position: absolute;
+  width: 1440px;
+  height: 176px;
+  top: 0;
+  left: 0;
+  background-color: #1b263c;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.change-email .image {
+  position: absolute;
+  width: 673px;
+  height: 325px;
+  top: -75px;
+  left: 384px;
+  object-fit: cover;
+}
+
+.change-email .menu-bar {
+  position: absolute;
+  top: 125px;
+  left: 1250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.change-email .menu-bar img {
+  width: 100px;
+  height: auto; 
+  display: block;
+}
+
+/* Form Section */
+.change-email .text-wrapper-3 {
+  position: absolute;
+  top: 388px;
+  left: 315px;
+  font-family: "Istok Web-Bold", Helvetica;
+  font-weight: 700;
+  color: #fda311;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+/* Email Input Field */
+.email-input {
+  position: absolute;
+  top: 420px;
+  left: 315px;
+  width: 780px;
+  height: 50px;
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0px 4px 4px #00000040;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.email-input::placeholder {
+  color: #a2a2a2;
+  font-size: 16px;
+}
+
+.email-input:focus {
+  border-color: #fda311;
+  box-shadow: 0 0 5px rgba(253, 163, 17, 0.5);
+}
+
+/* Label for Input Field */
+.change-email .text-wrapper-2 {
+  position: absolute;
+  top: 385px;
+  left: 315px;
+  font-family: "Istok Web-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+}

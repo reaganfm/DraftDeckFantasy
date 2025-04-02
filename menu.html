@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="globals.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="menu.css" />
+    <script src="home.js" defer></script>
+    <script src="menu.js" defer></script>
+</head>
+<body>
+    <div class="home-page">
+        <div class="div">
+            <div class="overlap">
+                <a href="myfantasyteam.html">
+                    <img class="rectangle" src="Images/fantasybanner.svg" />
+                    <div class="text-wrapper">My Fantasy Team</div>
+                </a>
+                <img class="star" src="Images/Star.svg" />
+            </div>
+            <div class="overlap-group">
+                <a href="notifications.html">
+                    <div class="rectangle-2"></div>
+                    <div class="text-wrapper-2">Notifications</div>
+                    <div class="ellipse"></div>
+                    <div class="text-wrapper-3">+3</div>
+                    <img class="bell" src="Images/Bell.svg" />
+                </a>
+            </div>
+            <div class="overlap-2">
+                <a href="settings.html">
+                    <div class="rectangle-3"></div>
+                    <div class="text-wrapper-4">Settings</div>
+                    <div class="icon-android"><img class="color" src="Images/settings.svg" /></div>
+                </a>
+            </div>
+            <div class="overlap-3">
+                <a href="about.html">
+                    <div class="rectangle-3"></div>
+                    <div class="text-wrapper-5">About</div>
+                    <img class="book-open" src="Images/Book-open.svg" />
+                </a>
+            </div>
+            <div class="overlap-4">
+                <div class="group">
+                    <div class="overlap-group-2">
+                        <div class="frame"></div>
+                        <img class="image" src="Images/draftdecklogo2.png" />
+                    </div>
+                </div>
+                <div class="menu-bar">
+                    <img id="menu-icon" class="img" src="Images/hamburger_menu.png" />
+                </div>
+                <div class="component">
+                    <div class="overlap-5">
+                        <div class="text-wrapper-6">Search</div>
+                        <img class="search" src="Images/Search 01.svg" />
+                        <div class="rectangle-4"></div>
+                        <img class="filter" src="Images/Filter.svg" />
+                    </div>
+                </div>
+            </div>
+            <div id="filter-menu" style="display: none; position: absolute; top: 300px; right: 300px; background: white; padding: 25px; border: 1px solid #ccc;">
+                <p>Filter Options:</p>
+                <label><input type="checkbox" value="players"> Players</label><br>
+                <label><input type="checkbox" value="teams"> Teams</label><br>
+                <label><input type="checkbox" value="cards"> Cards</label>
+            </div>
+        </div>
+    </div>
+    <div class="floating-menu">
+        <a href="home.html">Home</a>
+        <a href="myfantasyteam.html">My Fantasy Team</a>
+        <a href="helpfaq.html">Help/FAQ</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="settings.html">Settings</a>
+        <a href="about.html">About</a>
+        <a href="account.html">Account</a>
+        <a href="signout.html">Sign Out</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+.help-FAQ-page {
+  background-color: #16203d;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.help-FAQ-page .div {
+  background-color: #16203d;
+  overflow: hidden;
+  width: 1440px;
+  height: 4399px;
+  position: relative;
+}
+
+.help-FAQ-page .overlap-group {
+  position: absolute;
+  width: 1440px;
+  height: 671px;
+  top: 0;
+  left: 0;
+}
+
+.help-FAQ-page .frame {
+  position: absolute;
+  width: 1440px;
+  height: 176px;
+  top: 0;
+  left: 0;
+  background-color: #1b263c;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.help-FAQ-page .image {
+  position: absolute;
+  width: 673px;
+  height: 325px;
+  top: -75px;
+  left: 384px;
+  object-fit: cover;
+}
+
+.help-FAQ-page .how-to-use-draftdeck {
+  position: absolute;
+  width: 1158px;
+  top: 422px;
+  left: 194px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: 60px;
+}
+
+.help-FAQ-page .text-wrapper {
+  font-weight: 700;
+}
+
+.help-FAQ-page .span {
+  font-family: "Inter-Regular", Helvetica;
+}
+
+.help-FAQ-page .help-FAQ {
+  position: absolute;
+  width: 1200px;
+  top: 218px;
+  left: 120px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 128px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 158.4px;
+}
+
+.help-FAQ-page .menu-bar {
+  position: absolute;
+  top: -30px;
+  left: 1250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.help-FAQ-page .menu-bar img {
+  width: 100px;
+  height: auto; 
+  display: block;
+}
+
+.help-FAQ-page .line {
+  top: 39px;
+  position: absolute;
+  width: 59px;
+  height: 14px;
+  left: 36px;
+}
+
+.help-FAQ-page .img {
+  top: 57px;
+  position: absolute;
+  width: 59px;
+  height: 14px;
+  left: 36px;
+}
+
+.help-FAQ-page .line-2 {
+  top: 74px;
+  position: absolute;
+  width: 59px;
+  height: 14px;
+  left: 36px;
+}
+
+.help-FAQ-page .getting-started-sign {
+  position: absolute;
+  width: 1158px;
+  top: 816px;
+  left: 194px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: 60px;
+}
+
+.help-FAQ-page .overlap {
+  position: absolute;
+  width: 1158px;
+  height: 2781px;
+  top: 1684px;
+  left: 194px;
+}
+
+.help-FAQ-page .faqs-q-can-i-play-if {
+  position: absolute;
+  width: 1158px;
+  top: 1345px;
+  left: 0;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: 60px;
+}
+
+.help-FAQ-page .how-to-play-set-your {
+  position: absolute;
+  width: 1158px;
+  top: 0;
+  left: 0;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: 60px;
+}

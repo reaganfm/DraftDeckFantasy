@@ -1,0 +1,212 @@
+.settings {
+  background-color: #16203d;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.settings .div {
+  background-color: #16203d;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+.settings .group {
+  position: absolute;
+  width: 275px;
+  height: 77px;
+  top: 825px;
+  left: 583px;
+}
+
+.settings .overlap-group {
+  position: relative;
+  width: 273px;
+  height: 77px;
+  background-color: #fda311;
+  border-radius: 40px;
+}
+
+.settings .text-wrapper {
+  position: absolute;
+  width: 136px;
+  top: 13px;
+  left: 68px;
+  font-family: "Segoe UI-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.settings .overlap {
+  position: absolute;
+  width: 1440px;
+  height: 502px;
+  top: -155px;
+  left: 0;
+}
+
+.settings .rectangle {
+  top: 438px;
+  left: 523px;
+  position: absolute;
+  width: 394px;
+  height: 64px;
+  background-color: #fda311;
+}
+
+.settings .text-wrapper-2 {
+  width: 346px;
+  top: 444px;
+  left: 547px;
+  position: absolute;
+  font-family: "Segoe UI-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.settings .overlap-wrapper {
+  position: absolute;
+  width: 1440px;
+  height: 480px;
+  top: 0;
+  left: 0;
+}
+
+.settings .overlap-2 {
+  position: relative;
+  height: 325px;
+  top: 155px;
+}
+
+.settings .frame {
+  position: absolute;
+  width: 1440px;
+  height: 176px;
+  top: 0;
+  left: 0;
+  background-color: #1b263c;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.settings .image {
+  position: absolute;
+  width: 673px;
+  height: 325px;
+  top: -75px;
+  left: 384px;
+  object-fit: cover;
+}
+
+.settings .menu-bar {
+  position: absolute;
+  top: 125px;
+  left: 1250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings .menu-bar img {
+  width: 100px;
+  height: auto; 
+  display: block;
+}
+
+.settings .line {
+  top: 39px;
+  position: absolute;
+  width: 59px;
+  height: 14px;
+  left: 36px;
+}
+
+.settings .img {
+  top: 57px;
+  position: absolute;
+  width: 59px;
+  height: 14px;
+  left: 36px;
+}
+
+.settings .line-2 {
+  top: 74px;
+  position: absolute;
+  width: 59px;
+  height: 14px;
+  left: 36px;
+}
+
+.settings .overlap-group-wrapper {
+  position: absolute;
+  width: 396px;
+  height: 64px;
+  top: 394px;
+  left: 524px;
+}
+
+.settings .div-wrapper {
+  position: relative;
+  width: 394px;
+  height: 64px;
+  background-color: #fda311;
+}
+
+.settings .text-wrapper-3 {
+  width: 306px;
+  top: 7px;
+  left: 44px;
+  position: absolute;
+  font-family: "Segoe UI-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.settings .group-2 {
+  position: absolute;
+  width: 397px;
+  height: 64px;
+  top: 505px;
+  left: 523px;
+}
+
+.settings .overlap-3 {
+  position: relative;
+  width: 395px;
+  height: 64px;
+}
+
+.settings .rectangle-2 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 394px;
+  height: 64px;
+  background-color: #fda311;
+}
+
+.settings .text-wrapper-4 {
+  position: absolute;
+  width: 394px;
+  top: 7px;
+  left: 1px;
+  font-family: "Segoe UI-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}

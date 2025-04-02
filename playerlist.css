@@ -1,0 +1,257 @@
+.player-list {
+  background-color: #16203d;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.player-list .div {
+  background-color: #16203d;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+.player-list .player-player-player {
+  position: absolute;
+  width: 145px;
+  top: 367px;
+  left: 118px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #fda311;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.player-list .stat-stat-stat-stat {
+  position: absolute;
+  top: 367px;
+  left: 441px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #fda311;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.player-list .proj-proj-proj-proj {
+  position: absolute;
+  top: 367px;
+  left: 298px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #fda311;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.player-list .avg-avg-avg-avg-avg {
+  position: absolute;
+  top: 367px;
+  left: 591px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #fda311;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.player-list .opponent-opponent {
+  position: absolute;
+  top: 367px;
+  left: 796px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #fda311;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.player-list .overlap-group {
+  position: absolute;
+  width: 1440px;
+  height: 343px;
+  top: 0;
+  left: 0;
+}
+
+.player-list .frame {
+  position: absolute;
+  width: 1440px;
+  height: 176px;
+  top: 0;
+  left: 0;
+  background-color: #1b263c;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.player-list .image {
+  position: absolute;
+  width: 673px;
+  height: 325px;
+  top: -75px;
+  left: 384px;
+  object-fit: cover;
+}
+
+.player-list .rectangle {
+  width: 1226px;
+  left: 107px;
+  background-color: #788daa;
+  border-radius: 10px;
+  border: 10px solid;
+  border-color: #fda311;
+  position: absolute;
+  height: 142px;
+  top: 201px;
+}
+
+.player-list .rectangle-2 {
+  width: 212px;
+  left: 510px;
+  background-color: #fda310;
+  position: absolute;
+  height: 142px;
+  top: 201px;
+}
+
+.player-list .text-wrapper {
+  position: absolute;
+  width: 204px;
+  height: 142px;
+  top: 250px;
+  left: 107px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.player-list .text-wrapper-2 {
+  position: absolute;
+  width: 199px;
+  height: 142px;
+  top: 250px;
+  left: 311px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.player-list .text-wrapper-3 {
+  position: absolute;
+  width: 212px;
+  height: 142px;
+  top: 250px;
+  left: 510px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.player-list .text-wrapper-4 {
+  position: absolute;
+  width: 185px;
+  height: 142px;
+  top: 250px;
+  left: 722px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.player-list .text-wrapper-5 {
+  position: absolute;
+  width: 201px;
+  height: 142px;
+  top: 250px;
+  left: 907px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.player-list .text-wrapper-6 {
+  position: absolute;
+  width: 225px;
+  height: 142px;
+  top: 250px;
+  left: 1108px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.player-list .menu-bar {
+  position: absolute;
+  top: -30px;
+  left: 1250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-list .menu-bar img {
+  width: 100px;
+  height: auto; 
+  display: block;
+}
+
+.player-list .line {
+  top: 39px;
+  position: absolute;
+  width: 59px;
+  height: 14px;
+  left: 36px;
+}
+
+.player-list .img {
+  top: 57px;
+  position: absolute;
+  width: 59px;
+  height: 14px;
+  left: 36px;
+}
+
+.player-list .line-2 {
+  top: 74px;
+  position: absolute;
+  width: 59px;
+  height: 14px;
+  left: 36px;
+}

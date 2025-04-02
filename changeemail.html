@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Email</title>
+    <link rel="stylesheet" href="globals.css">
+    <link rel="stylesheet" href="changeemail.css">
+</head>
+<body>
+    <div class="change-email">
+        <div class="div">
+            <!-- Save New Email Button -->
+            <div class="overlap">
+                <div class="rectangle"></div>
+                <a href="home.html"> <button type="submit" class="save-email-button">Save New Email</button> </a>
+            </div>
+            
+            <!-- Logo & Navigation -->
+            <div class="overlap-group">
+                <div class="group">
+                    <div class="overlap-group-2">
+                        <div class="frame"></div>
+                        <a href="home.html">
+                            <img class="image" src="Images/draftdecklogo2.png" alt="Go to Home">
+                        </a>
+                    </div>
+                </div>
+                <div class="menu-bar">
+                    <img class="img" src="Images/hamburger_menu.png" alt="Menu">
+                </div>
+            </div>
+
+            <!-- Email Input Field -->
+            <div class="div-wrapper">
+                <label for="new-email" class="text-wrapper-2">Enter new email address:</label>
+            </div>
+
+            <input 
+                type="email" 
+                id="new-email" 
+                name="new-email" 
+                class="email-input"
+                aria-required="true" 
+                placeholder="Enter your new email"
+            >
+
+        </div>
+    </div>
+</body>
+</html>

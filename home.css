@@ -1,0 +1,365 @@
+.home-page {
+  background-color: #16203d;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.home-page .div {
+  background-color: #16203d;
+  overflow: hidden;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+.home-page .overlap {
+  position: absolute;
+  width: 910px;
+  height: 231px;
+  top: 361px;
+  left: 265px;
+}
+
+.home-page .rectangle {
+  width: 910px;
+  height: 231px;
+  top: 0;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+}
+
+.home-page .text-wrapper {
+  position: absolute;
+  width: 886px;
+  height: 153px;
+  top: 100px;
+  left: 12px;
+  text-shadow: 0px 4px 4px #00000040;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 80px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home-page .star {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 36px;
+  left: 420px;
+}
+
+.home-page .overlap-group {
+  position: absolute;
+  width: 281px;
+  height: 463px;
+  top: 614px;
+  left: 280px;
+}
+
+.home-page .rectangle-2 {
+  width: 247px;
+  height: 253px;
+  top: 26px;
+  background-color: #fda311;
+  border-radius: 50px;
+  position: absolute;
+  left: 0;
+}
+
+.home-page .text-wrapper-2 {
+  position: absolute;
+  width: 212px;
+  top: 172px;
+  left: 29px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home-page .ellipse {
+  position: absolute;
+  width: 91px;
+  height: 91px;
+  top: 0;
+  left: 186px;
+  background-color: #2e7bef;
+  border-radius: 45.5px;
+  box-shadow: 0px 6px 6px 3px #00000040;
+}
+
+.home-page .text-wrapper-3 {
+  position: absolute;
+  width: 72px;
+  top: 25px;
+  left: 209px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home-page .bell {
+  position: absolute;
+  width: 63px;
+  height: 63px;
+  top: 91px;
+  left: 94px;
+}
+
+.home-page .overlap-2 {
+  position: absolute;
+  width: 247px;
+  height: 437px;
+  top: 640px;
+  left: 600px;
+}
+
+.home-page .rectangle-3 {
+  position: absolute;
+  width: 247px;
+  height: 253px;
+  top: 0;
+  left: 0;
+  background-color: #fda311;
+  border-radius: 50px;
+}
+
+.home-page .text-wrapper-4 {
+  position: absolute;
+  width: 176px;
+  top: 146px;
+  left: 58px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home-page .icon-android {
+  position: absolute;
+  width: 73px;
+  height: 73px;
+  top: 59px;
+  left: 89px;
+}
+
+.home-page .color {
+  position: absolute;
+  width: 57px;
+  height: 58px;
+  top: 7px;
+  left: 8px;
+}
+
+.home-page .overlap-3 {
+  position: absolute;
+  width: 253px;
+  height: 437px;
+  top: 640px;
+  left: 913px;
+}
+
+.home-page .text-wrapper-5 {
+  position: absolute;
+  width: 176px;
+  top: 146px;
+  left: 77px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.home-page .book-open {
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  top: 63px;
+  left: 88px;
+}
+
+.home-page .overlap-4 {
+  position: absolute;
+  width: 1440px;
+  height: 480px;
+  top: -155px;
+  left: 0;
+}
+
+.home-page .menu-bar {
+  position: absolute;
+  top: 125px;
+  left: 1250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-page .menu-bar img {
+  width: 100px;
+  height: auto; 
+  display: block;
+}
+
+.home-page .line {
+  top: 39px;
+  position: absolute;
+  width: 59px;
+  height: 14px;
+  left: 36px;
+}
+
+.home-page .img {
+  top: 57px;
+  position: absolute;
+  width: 59px;
+  height: 14px;
+  left: 36px;
+}
+
+.home-page .line-2 {
+  top: 74px;
+  position: absolute;
+  width: 59px;
+  height: 14px;
+  left: 36px;
+}
+
+.home-page .group {
+  position: absolute;
+  width: 1440px;
+  height: 480px;
+  top: 0;
+  left: 0;
+}
+
+.home-page .overlap-group-2 {
+  position: relative;
+  height: 325px;
+  top: 155px;
+}
+
+.home-page .frame {
+  position: absolute;
+  width: 1440px;
+  height: 176px;
+  top: 0;
+  left: 0;
+  background-color: #1b263c;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.home-page .image {
+  position: absolute;
+  width: 673px;
+  height: 325px;
+  top: -75px;
+  left: 384px;
+  object-fit: cover;
+}
+
+.home-page .component {
+  position: absolute;
+  width: 856px;
+  height: 104px;
+  top: 363px;
+  left: 292px;
+}
+
+.home-page .overlap-5 {
+  position: relative;
+  height: 104px;
+  border-radius: 60px;
+}
+
+.home-page .text-wrapper-6 {
+  position: absolute;
+  width: 265px;
+  top: 14px;
+  left: 113px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 64px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.home-page .search {
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  top: 9px;
+  left: 22px;
+}
+
+.home-page .rectangle-4 {
+  width: 856px;
+  height: 104px;
+  top: 0;
+  border-radius: 60px;
+  border: 3px solid;
+  border-color: #979797;
+  position: absolute;
+  left: 0;
+}
+
+.home-page .filter {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  top: 18px;
+  left: 754px;
+}
+
+/* Filter Menu Styles */
+#filter-menu {
+  position: absolute;
+  top: 98px; /* Adjust to be directly below the filter icon */
+  right: 22px; /* Aligned with the right edge of the filter icon */
+  background: white;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 12px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: #000000; 
+}
+
+#filter-menu p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#filter-menu label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#filter-menu input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Style the filter button to make it clickable */
+.filter {
+    cursor: pointer;
+}

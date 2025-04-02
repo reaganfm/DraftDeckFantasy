@@ -1,0 +1,239 @@
+.account {
+  background-color: #16203d;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.account .div {
+  background-color: #16203d;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+.account .overlap-group {
+  position: absolute;
+  width: 1440px;
+  height: 663px;
+  top: 0;
+  left: 0;
+}
+
+.account .frame {
+  position: absolute;
+  width: 1440px;
+  height: 176px;
+  top: 0;
+  left: 0;
+  background-color: #1b263c;
+  box-shadow: 0px 4px 4px #00000040;
+}
+
+.account .image {
+  width: 673px;
+  height: 325px;
+  top: -75px;
+  left: 384px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.account .ellipse {
+  position: absolute;
+  width: 258px;
+  height: 258px;
+  top: 405px;
+  left: 591px;
+  background-color: #d9d9d9;
+  border-radius: 129px;
+}
+
+.account .text-wrapper {
+  position: absolute;
+  width: 601px;
+  top: 209px;
+  left: 419px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 96px;
+  text-align: center;
+}
+
+.account .text-wrapper-2 {
+  position: absolute;
+  width: 496px;
+  top: 324px;
+  left: 472px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 40px;
+  text-align: center;
+}
+
+.account .menu-bar {
+  position: absolute;
+  top: -30px;
+  left: 1250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account .menu-bar img {
+  width: 100px;
+  height: auto; 
+  display: block;
+}
+
+.account .overlap {
+  position: absolute;
+  width: 180px;
+  height: 39px;
+  top: 707px;
+  left: 94px;
+}
+
+.account .text-wrapper-3 {
+  position: absolute;
+  width: 180px;
+  top: 0;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #fffefe;
+  font-size: 32px;
+}
+
+.account .vector {
+  position: absolute;
+  width: 17px;
+  height: 19px;
+  top: 12px;
+  left: 158px;
+}
+
+.account .image-2 {
+  width: 220px;
+  height: 262px;
+  top: 762px;
+  left: 133px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.account .image-3 {
+  width: 220px;
+  height: 262px;
+  top: 762px;
+  left: 381px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.account .image-4 {
+  width: 220px;
+  height: 262px;
+  top: 762px;
+  left: 629px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.account .image-5 {
+  width: 220px;
+  height: 262px;
+  top: 762px;
+  left: 877px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.account .image-6 {
+  width: 220px;
+  height: 262px;
+  top: 762px;
+  left: 1125px;
+  position: absolute;
+  object-fit: cover;
+}
+
+
+.my-cards-link {
+  text-decoration: none; 
+}
+
+.my-cards-link .overlap {
+  cursor: pointer; 
+  position: absolute;
+  top: 707px;
+  left: 94px;
+  display: flex;
+  align-items: center;
+}
+
+.my-cards-link .text-wrapper-3 {
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #fffefe;
+  font-size: 32px;
+}
+
+.my-cards-link .vector {
+  position: absolute;
+  width: 17px;
+  height: 19px;
+  top: 12px;
+  left: 158px;
+}
+
+.profile-picture-container {
+  position: absolute;
+  width: 258px;
+  height: 258px;
+  top: 390px;
+  left: 591px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#change-picture-button,
+#delete-picture-button {
+  position: absolute;
+  top: 670px;
+  left: 550px;
+  padding: 10px 20px;
+  background-color: #fda311;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#delete-picture-button {
+  left: 755px;
+}
+
+#delete-picture-button:hover {
+  background-color: rgba(255, 42, 0, 0.82);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+#change-picture-button:hover {
+  background-color: rgba(0, 42, 255, 0.644);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
