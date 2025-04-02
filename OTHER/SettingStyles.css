@@ -1,0 +1,163 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #16203D;
+}
+
+/* Header (Masshead) */
+.masshead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1B263C;
+    padding: 20px 40px;
+}
+
+.logo img {
+    width: 150px;
+    height: 50px;
+}
+
+.header-title {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Container for the buttons and sections */
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Button Styles */
+.button {
+    width: 394px;
+    height: 64px;
+    position: absolute;
+    background: #FDA311;
+}
+
+.button-background {
+    width: 394px;
+    height: 64px;
+    position: absolute;
+    background: #FDA311;
+}
+
+.button-text {
+    width: 346px;
+    height: 51px;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    font-family: Segoe UI;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+/* Sign Out */
+.sign-out {
+    left: 583px;
+    top: 825px;
+}
+
+.sign-out .button-background {
+    border-radius: 40px;
+}
+
+.sign-out .button-text {
+    left: 68px;
+    top: 13px;
+}
+
+/* Change Password */
+.change-password {
+    left: 523px;
+    top: 283px;
+}
+
+/* Change Username */
+.change-username {
+    left: 524px;
+    top: 394px;
+}
+
+.change-username .button-text {
+    left: 44px;
+    top: 7px;
+}
+
+/* Change Email Address */
+.change-email {
+    left: 523px;
+    top: 505px;
+}
+
+.change-email .button-text {
+    left: 1px;
+    top: 7px;
+}
+
+/* Image Section */
+.image-container {
+    width: 1440px;
+    height: 480px;
+    left: 0px;
+    top: -155px;
+    position: absolute;
+}
+
+.image-background {
+    width: 1440px;
+    height: 176px;
+    position: absolute;
+    background: #1B263C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.image {
+    width: 673px;
+    height: 480px;
+    position: absolute;
+    left: 384px;
+    top: 0px;
+}
+
+/* Icon Section */
+.icon-container {
+    width: 131px;
+    height: 125px;
+    position: absolute;
+    left: 1276px;
+    top: 34px;
+}
+
+.icon-line {
+    width: 51px;
+    height: 0px;
+    position: absolute;
+    left: 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 6px white solid;
+}
+
+.icon-line:nth-child(1) {
+    top: 45px;
+}
+
+.icon-line:nth-child(2) {
+    top: 63px;
+}
+
+.icon-line:nth-child(3) {
+    top: 80px;
+}
