@@ -3,7 +3,7 @@ let enlargedCard = null;
 document.querySelectorAll('.card-container').forEach(cardContainer => {
   const cardInner = cardContainer.querySelector('.card-inner');
 
-  // Click event to enlarge card
+  // Click event to enlarge card or flip if already enlarged
   cardContainer.addEventListener('click', function (event) {
     event.stopPropagation();
 
@@ -24,17 +24,15 @@ document.querySelectorAll('.card-container').forEach(cardContainer => {
   });
 });
 
-// Close enlarged card when clicking outside
+// Close enlarged card
 function closeCard() {
   if (enlargedCard) {
     enlargedCard.classList.remove('enlarged');
-    enlargedCard.querySelector('.card-inner').classList.remove('flipped'); // Reset flip when closing
+    enlargedCard.querySelector('.card-inner').classList.remove('flipped');
     document.getElementById("overlay").style.display = "none";
     enlargedCard = null;
   }
 }
 
-// Close enlarged card when clicking on the overlay
+// Close when clicking on overlay
 document.getElementById("overlay").addEventListener("click", closeCard);
-
-
