@@ -297,4 +297,84 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initializeCardEvents();
   updateAddButton();
+
+  const urlParams = new URLSearchParams(window.location.search);
+
+  // ✅ Auto-open Add Modal if redirected from Team List
+  if (urlParams.get("openAdd") === "true") {
+    editMode = true;
+    editButton.textContent = "Done";
+    updateEditModeUI();
+
+    setTimeout(() => {
+      showAddCardDropdown();
+    }, 100);
+  }
+
+  // ✅ Auto-enlarge specific card (e.g. ?showCard=Mahomes)
+  const showCardName = urlParams.get("showCard");
+  if (showCardName) {
+    setTimeout(() => {
+      const card = document.querySelector(`.card-container[data-name="${showCardName}"]`);
+      if (card) {
+        enlargeCard(card);
+      }
+    }, 300);
+  }
 });
+
+// 🔍 New helper: simulate card click/enlargement
+function enlargeCard(cardContainer) {
+  if (enlargedCard) closeCard();
+
+  const overlay = document.getElementById("overlay");
+  overlay.style.display = "block";
+
+  const cardClone = cardContainer.cloneNode(true);
+  const cardInner = cardClone.querySelector('.card-inner');
+  if (!cardInner) return;
+
+  cardInner.classList.remove('flipped');
+
+  Object.assign(cardClone.style, {
+    position: 'fixed',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    zIndex: '1001',
+    margin: '0',
+    width: '400px',
+    height: '600px',
+    boxShadow: '0 10px 40px rgba(0, 0, 0, 0.7)',
+    backgroundColor: '#0d1b29',
+    borderRadius: '12px',
+    padding: '10px',
+    animation: 'fadeZoomIn 0.25s ease-out forwards'
+  });
+
+  const closeBtn = document.createElement('button');
+  closeBtn.textContent = '✕';
+  closeBtn.classList.add('close-btn');
+  closeBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    closeCard();
+  });
+
+  const rotateBtn = document.createElement('button');
+  rotateBtn.classList.add('rotate-btn');
+  const rotateIcon = document.createElement('img');
+  rotateIcon.src = 'Images/rotateicon.svg';
+  rotateIcon.alt = 'Rotate Card';
+  rotateIcon.classList.add('rotate-icon');
+  rotateBtn.appendChild(rotateIcon);
+  rotateBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    cardInner.classList.toggle('flipped');
+  });
+
+  cardClone.appendChild(closeBtn);
+  cardClone.appendChild(rotateBtn);
+
+  document.body.appendChild(cardClone);
+  enlargedCard = cardClone;
+}
