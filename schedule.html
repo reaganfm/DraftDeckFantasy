@@ -1,73 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <title>Schedule</title>
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="schedule.css" />
   </head>
   <body>
     <div class="schedule">
       <div class="div">
-        <div class="text-wrapper">Week 1</div>
-        <div class="text-wrapper-2">Week 2</div>
-        <div class="text-wrapper-3">Week 3</div>
-        <div class="text-wrapper-4">Week 4</div>
-        <div class="overlap">
-          <div class="text-wrapper-5">Week 5</div>
-          <div class="text-wrapper-6">Week 6</div>
-          <div class="text-wrapper-7">Week 7</div>
-          <div class="text-wrapper-8">Week 8</div>
-        </div>
-        <div class="overlap-group">
-          <div class="text-wrapper-9">Team v. Team</div>
-          <div class="text-wrapper-9">Team v. Team</div>
-        </div>
-        <div class="text-wrapper-10">Team v. Team</div>
-        <div class="text-wrapper-11">Team v. Team</div>
-        <div class="text-wrapper-12">Team v. Team</div>
-        <div class="text-wrapper-13">Team v. Team</div>
-        <div class="overlap-2">
-          <div class="text-wrapper-9">Team v. Team</div>
-          <div class="text-wrapper-14">Team v. Team</div>
-          <div class="text-wrapper-15">Team v. Team</div>
-        </div>
-        <div class="text-wrapper-16">Week 9</div>
-        <div class="text-wrapper-17">Team v. Team</div>
-        <div class="text-wrapper-18">Week 10</div>
-        <div class="text-wrapper-19">Team v. Team</div>
-        <div class="text-wrapper-20">Week 11</div>
-        <div class="text-wrapper-21">Team v. Team</div>
-        <div class="text-wrapper-22">Week 12</div>
-        <div class="text-wrapper-23">Team v. Team</div>
-        <div class="overlap-3">
-          <div class="text-wrapper-24">Week 13</div>
-          <div class="text-wrapper-25">Week 14</div>
-        </div>
-        <div class="overlap-4">
-          <div class="text-wrapper-9">Team v. Team</div>
-          <div class="text-wrapper-26">Team v. Team</div>
-        </div>
-        <div class="text-wrapper-27">Week 15</div>
-        <div class="text-wrapper-28">Team v. Team</div>
-        <div class="text-wrapper-29">Week 16</div>
-        <div class="text-wrapper-30">Team v. Team</div>
-        <div class="div-wrapper"><div class="text-wrapper-31">This Week’s League Schedule</div></div>
-        <p class="team-v-team-team-v">
-          Team v. Team<br />Team v. Team<br />Team v. Team<br />Team v. Team<br />Team v. Team
-        </p>
+        <!-- Header & Nav -->
         <div class="overlap-group-2">
           <div class="frame"></div>
-          <a href="home.html"><img class="image" src="Images/draftdecklogo2.png" alt="Go to Home"/> </a>
+          <a href="home.html"
+            ><img
+              class="image"
+              src="Images/draftdecklogo2.png"
+              alt="Go to Home"
+          /></a>
           <div class="rectangle"></div>
           <div class="rectangle-2"></div>
           <a href="match.html"><div class="text-wrapper-32">Match</div></a>
-          <a href="teamlist.html"><div class="text-wrapper-33">Team List</div></a>
-          <a href="playerlist.html"><div class="text-wrapper-34">Player list</div></a>
+          <a href="teamlist.html"
+            ><div class="text-wrapper-33">Team List</div></a
+          >
+          <a href="playerlist.html"
+            ><div class="text-wrapper-34">Player list</div></a
+          >
           <a href="league.html"><div class="text-wrapper-35">League</div></a>
           <div class="text-wrapper-36">Schedule</div>
-          <a href="draftroom.html"><div class="text-wrapper-37">Draftroom</div></a>
+          <a href="draftroom.html"
+            ><div class="text-wrapper-37">Draftroom</div></a
+          >
           <div class="menu-bar">
             <img class="img" src="Images/hamburger_menu.png" />
+          </div>
+        </div>
+
+        <!-- Title Bar -->
+        <div class="div-wrapper">
+          <div class="text-wrapper-31">This Week’s League Schedule</div>
+        </div>
+
+        <!-- Matchup Display -->
+        <p class="team-v-team-team-v">
+          Team v. Team<br />Team v. Team<br />Team v. Team<br />Team v. Team<br />Team
+          v. Team
+        </p>
+
+        <!-- Week 1–16 -->
+        <div class="schedule-weeks">
+          <div class="week-block" style="top: 407px">
+            <div class="week-label">Week 1</div>
+            <div class="matchup">Team v. Team</div>
+          </div>
+          <div class="week-block" style="top: 443px">
+            <div class="week-label">Week 2</div>
+            <div class="matchup">Team v. Team</div>
+          </div>
+          <div class="week-block" style="top: 481px">
+            <div class="week-label">Week 3</div>
+            <div class="matchup">Team v. Team</div>
+          </div>
+          <div class="week-block" style="top: 519px">
+            <div class="week-label">Week 4</div>
+            <div class="matchup">Team v. Team</div>
+          </div>
+          <div class="week-block" style="top: 557px">
+            <div class="week-label">Week 5</div>
+            <div class="matchup">Team v. Team</div>
+          </div>
+          <div class="week-block" style="top: 594px">
+            <div class="week-label">Week 6</div>
+            <div class="matchup">Team v. Team</div>
+          </div>
+          <div class="week-block" style="top: 630px">
+            <div class="week-label">Week 7</div>
+            <div class="matchup">Team v. Team</div>
+          </div>
+          <div class="week-block" style="top: 666px">
+            <div class="week-label">Week 8</div>
+            <div class="matchup">Team v. Team</div>
+          </div>
+          <div class="week-block" style="top: 697px">
+            <div class="week-label">Week 9</div>
+            <div class="matchup">Team v. Team</div>
+          </div>
+          <div class="week-block" style="top: 734px">
+            <div class="week-label">Week 10</div>
+            <div class="matchup">Team v. Team</div>
+          </div>
+          <div class="week-block" style="top: 770px">
+            <div class="week-label">Week 11</div>
+            <div class="matchup">Team v. Team</div>
+          </div>
+          <div class="week-block" style="top: 808px">
+            <div class="week-label">Week 12</div>
+            <div class="matchup">Team v. Team</div>
+          </div>
+          <div class="week-block" style="top: 846px">
+            <div class="week-label">Week 13</div>
+            <div class="matchup">Team v. Team</div>
+          </div>
+          <div class="week-block" style="top: 882px">
+            <div class="week-label">Week 14</div>
+            <div class="matchup">Team v. Team</div>
+          </div>
+          <div class="week-block" style="top: 916px">
+            <div class="week-label">Week 15</div>
+            <div class="matchup">Team v. Team</div>
+          </div>
+          <div class="week-block" style="top: 952px">
+            <div class="week-label">Week 16</div>
+            <div class="matchup">Team v. Team</div>
           </div>
         </div>
       </div>
