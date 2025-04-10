@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <title>My Fantasy Team</title>
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="myfantasyteam.css" />
   </head>
@@ -11,19 +12,35 @@
         <div class="overlap">
           <div class="rectangle"></div>
           <img class="vector" src="img/vector-1.svg" />
-          <div class="text-wrapper">Sliding top cards, News,etc</div>
+          <div class="text-wrapper">Sliding top cards, News, etc</div>
           <img class="slide" src="Images/the-athletic.svg" />
           <img class="fantasy-news" src="Images/top-cards.svg" />
           <img class="screenshot" src="Images/espn-how-to-play.svg" />
         </div>
+
+        <!-- Hamburger menu with correct ID -->
         <div class="overlap-group">
           <div class="text-wrapper-2">My Fantasy Team</div>
           <div class="frame"></div>
-          <a href="home.html"><img class="image" src="Images/draftdecklogo2.png" alt="Go to Home"/> </a>
+          <a href="home.html">
+            <img class="image" src="Images/draftdecklogo2.png" alt="Go to Home" />
+          </a>
           <div class="menu-bar">
-            <img class="img" src="Images/hamburger_menu.png" />
+            <img id="menu-icon" class="img" src="Images/hamburger_menu.png" alt="Menu" />
           </div>
         </div>
+
+        <!-- Hidden menu with links -->
+        <nav id="menu">
+          <a href="match.html">Match</a>
+          <a href="teamlist.html">Team List</a>
+          <a href="playerlist.html">Player List</a>
+          <a href="league.html">League</a>
+          <a href="schedule.html">Schedule</a>
+          <a href="draftroom.html">Draftroom</a>
+        </nav>
+
+        <!-- Other existing page content -->
         <div class="overlap-group-2">
           <div class="rectangle-2"></div>
           <a href="match.html"><div class="text-wrapper-3">Match</div></a>
@@ -35,6 +52,8 @@
         </div>
       </div>
     </div>
-    
+
+    <!-- Link to your menu.js file -->
+    <script src="menu.js"></script>
   </body>
 </html>

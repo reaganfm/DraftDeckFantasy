@@ -1,73 +1,81 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Function to get URL parameters
   function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
-    const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-      results = regex.exec(url);
+    const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+    const results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return "";
     return decodeURIComponent(results[2].replace(/\+/g, " "));
   }
 
-  // Get the search term from the URL
-  const searchTerm = getParameterByName("q");
-
-  if (searchTerm) {
-    // Example data for now, insert ESPN API?
-    const data = [
-      { name: "Player 1", team: "Team A", description: "This is player 1" },
-      { name: "Player 2", team: "Team B", description: "This is player 2" },
-      { name: "Team C", team: "Team C", description: "This is team C" },
-      { name: "Card 1", team: "Team A", description: "This is card 1" },
-      { name: "Another Player", team: "Team D", description: "This is another player" },
-      // Add more data as needed
-    ];
-
-    // Filter the data based on the search term
-    const results = data.filter((item) => {
-      return (
-        item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.team.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    });
-
-    // Display the results
-    const resultsContainer = document.querySelector(".group"); // Select the .group div
-    resultsContainer.innerHTML = ""; // Clear previous results
-
-    if (results.length > 0) {
-      results.forEach((result) => {
-        const resultDiv = document.createElement("div");
-        resultDiv.innerHTML = `
-          <h3>${result.name}</h3>
-          <p>Team: ${result.team}</p>
-          <p>Description: ${result.description}</p>
-        `;
-        resultsContainer.appendChild(resultDiv);
-      });
-    } else {
-      resultsContainer.textContent = "No results found.";
-      resultsContainer.style.color = "#333";
-      resultsContainer.style.fontFamily = "Arial, sans-serif";
-      resultsContainer.style.fontSize = "40px";
-      resultsContainer.style.padding = "150px";
-      resultsContainer.style.textAlign = "center"; 
-    }
-  } else {
-    const resultsContainer = document.querySelector(".group");
-    if(resultsContainer){ // check if resultsContainer exists.
-      resultsContainer.textContent = "Please enter a search term.";
-      resultsContainer.style.color = "#333";
-      resultsContainer.style.fontFamily = "Arial, sans-serif";
-      resultsContainer.style.fontSize = "40px";
-      resultsContainer.style.padding = "150px";
-      resultsContainer.style.textAlign = "center";
-    }
+  function styleNoResults(container) {
+    container.style.color = "#333";
+    container.style.fontFamily = "Arial, sans-serif";
+    container.style.fontSize = "40px";
+    container.style.padding = "150px";
+    container.style.textAlign = "center";
   }
 
-  // Search box and filter functionality from home.js
+  const searchTerm = getParameterByName("q");
+  const resultsContainer = document.querySelector(".group");
+  resultsContainer.innerHTML = "";
+
+  if (searchTerm) {
+    fetch(`http://localhost:5001/api/search-player?q=${encodeURIComponent(searchTerm)}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (!data.results || data.results.length === 0) {
+          resultsContainer.textContent = "No results found.";
+          styleNoResults(resultsContainer);
+          return;
+        }
+
+        data.results.forEach((player) => {
+          const resultDiv = document.createElement("div");
+          resultDiv.innerHTML = `
+            <h3>${player.name}</h3>
+            <p><strong>Player ID:</strong> ${player.id}</p>
+            <p><strong>Team ID:</strong> ${player.team_id}</p>
+            <p><strong>Stats:</strong></p>
+            <ul>
+              ${Object.entries(player.stats).map(([key, value]) => `<li>${key}: ${value}</li>`).join("")}
+            </ul>
+          `;
+          resultDiv.style.background = "#fff";
+          resultDiv.style.padding = "20px";
+          resultDiv.style.margin = "20px";
+          resultDiv.style.borderRadius = "12px";
+          resultDiv.style.border = "2px solid #fda311";
+          resultDiv.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.15)";
+          resultsContainer.appendChild(resultDiv);
+        });
+      })
+      .catch((err) => {
+        console.error("API error:", err);
+        resultsContainer.innerHTML = `
+          <div style="
+            background-color: #ffe0e0;
+            border: 2px solid #ff4d4d;
+            padding: 30px;
+            font-size: 24px;
+            color: #990000;
+            border-radius: 12px;
+            margin: 50px auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+          ">
+            🔥 An error occurred while fetching player data.<br/>
+            ${err.message || "Please try again later."}
+          </div>
+        `;
+      });
+  } else {
+    resultsContainer.textContent = "Please enter a search term.";
+    styleNoResults(resultsContainer);
+  }
+
   const searchInput = document.querySelector(".component .overlap-5");
   const filterButton = document.querySelector(".filter");
   const filterMenu = document.getElementById("filter-menu");
@@ -97,13 +105,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Filter button functionality
   filterButton.addEventListener("click", function (event) {
     event.stopPropagation();
     filterMenu.style.display = filterMenu.style.display === "block" ? "none" : "block";
   });
 
-  // Close filter menu when clicking outside
   document.addEventListener("click", function (event) {
     if (!filterMenu.contains(event.target) && event.target !== filterButton) {
       filterMenu.style.display = "none";
