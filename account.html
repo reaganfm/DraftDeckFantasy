@@ -2,25 +2,61 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <title>Account</title>
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="account.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <script src="menu.js" defer></script>
+    <script src="account.js" defer></script>
   </head>
   <body>
     <div class="account">
       <div class="div">
+        <!-- Header -->
         <div class="overlap-group">
           <div class="frame"></div>
-          <a href="home.html"><img class="image" src="Images/draftdecklogo2.png" alt="Go to Home"/> </a>
+          <a href="home.html"
+            ><img
+              class="image"
+              src="Images/draftdecklogo2.png"
+              alt="Go to Home"
+          /></a>
+
+          <!-- Hamburger Icon -->
+          <div class="menu-bar">
+            <img
+              id="menu-icon"
+              class="img"
+              src="Images/hamburger_menu.png"
+              alt="Menu"
+            />
+          </div>
+
+          <!-- Dropdown Menu -->
+          <div id="menu" class="menu-container">
+            <a href="home.html">Home</a>
+            <a href="myfantasyteam.html">My Fantasy Team</a>
+            <a href="helpfaq.html">Help/FAQ</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="settings.html">Settings</a>
+            <a href="about.html">About</a>
+            <a href="account.html">Account</a>
+            <a href="signout.html">Sign Out</a>
+          </div>
+
           <div class="profile-picture-container">
-            <img id="profile-picture" class="profile-picture" src="Images/default-profile.png" alt="Profile Picture" />
+            <img
+              id="profile-picture"
+              class="profile-picture"
+              src="Images/default-profile.png"
+              alt="Profile Picture"
+            />
           </div>
           <div class="text-wrapper">Account</div>
           <div class="text-wrapper-2">@username123</div>
-          <div class="menu-bar">
-            <img class="img" src="Images/hamburger_menu.png" />
-          </div>
         </div>
 
+        <!-- My Cards Shortcut -->
         <a href="mycards.html" class="my-cards-link">
           <div class="overlap">
             <div class="text-wrapper-3">My Cards</div>
@@ -28,17 +64,23 @@
           </div>
         </a>
 
+        <!-- Trading Cards -->
         <img class="image-2" src="Images/TradingCards/Lamar.png" />
         <img class="image-3" src="Images/TradingCards/Kamara_Card.png" />
         <img class="image-4" src="Images/TradingCards/Saquon_Card.png" />
         <img class="image-5" src="Images/TradingCards/Bijan_Card.png" />
         <img class="image-6" src="Images/TradingCards/Pickens_Card.png" />
 
-        <input type="file" id="profile-picture-input" accept="image/*" style="display: none;" />
+        <!-- Profile Picture Actions -->
+        <input
+          type="file"
+          id="profile-picture-input"
+          accept="image/*"
+          style="display: none"
+        />
         <button id="change-picture-button">Add/Change Picture</button>
         <button id="delete-picture-button">Delete Picture</button>
       </div>
     </div>
-    <script src="account.js" defer></script>
   </body>
 </html>

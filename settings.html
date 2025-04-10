@@ -2,35 +2,83 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <title>Settings</title>
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="settings.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <script src="menu.js" defer></script>
   </head>
   <body>
     <div class="settings">
       <div class="div">
-        <div class="group">
-          <div class="overlap-group"><div class="text-wrapper">Sign Out</div></div>
-        </div>
+        <!-- Header Section -->
         <div class="overlap">
-          <a href="changepassword.html"><div class="rectangle"></div>
-          <div class="text-wrapper-2">Change Password</div></a>
+          <a href="changepassword.html"
+            ><div class="rectangle"></div>
+            <div class="text-wrapper-2">Change Password</div></a
+          >
+
           <div class="overlap-wrapper">
             <div class="overlap-2">
               <div class="frame"></div>
-              <a href="home.html"><img class="image" src="Images/draftdecklogo2.png" alt="Go to Home"/> </a>
+              <a href="home.html">
+                <img
+                  class="image"
+                  src="Images/draftdecklogo2.png"
+                  alt="Go to Home"
+                />
+              </a>
             </div>
           </div>
-          <div class="menu-bar">
-            <img class="img" src="Images/hamburger_menu.png" />
+
+          <!-- Hamburger Menu Icon -->
+          <div
+            class="menu-bar"
+            style="position: absolute; top: 110px; left: 1250px; z-index: 101"
+          >
+            <img
+              id="menu-icon"
+              class="img"
+              src="Images/hamburger_menu.png"
+              alt="Menu"
+              style="width: 100px"
+            />
+          </div>
+
+          <!-- Dropdown Menu -->
+          <div id="menu" class="menu-container">
+            <a href="home.html">Home</a>
+            <a href="myfantasyteam.html">My Fantasy Team</a>
+            <a href="helpfaq.html">Help/FAQ</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="settings.html">Settings</a>
+            <a href="about.html">About</a>
+            <a href="account.html">Account</a>
+            <a href="signout.html">Sign Out</a>
           </div>
         </div>
-        <div class="overlap-group-wrapper">
-          <a href="changeusername.html"><div class="div-wrapper"><div class="text-wrapper-3">Change Username</div></div></a>
+
+        <!-- Other Settings Options -->
+        <div class="group">
+          <div class="overlap-group">
+            <div class="text-wrapper">Sign Out</div>
+          </div>
         </div>
+
+        <div class="overlap-group-wrapper">
+          <a href="changeusername.html">
+            <div class="div-wrapper">
+              <div class="text-wrapper-3">Change Username</div>
+            </div>
+          </a>
+        </div>
+
         <div class="group-2">
           <div class="overlap-3">
-            <a href="changeemail.html"><div class="rectangle-2"></div>
-            <div class="text-wrapper-4">Change Email Address</div></a>
+            <a href="changeemail.html">
+              <div class="rectangle-2"></div>
+              <div class="text-wrapper-4">Change Email Address</div>
+            </a>
           </div>
         </div>
       </div>

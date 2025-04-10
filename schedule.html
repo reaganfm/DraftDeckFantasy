@@ -5,19 +5,22 @@
     <title>Schedule</title>
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="schedule.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <script src="menu.js" defer></script>
   </head>
   <body>
     <div class="schedule">
       <div class="div">
-        <!-- Header & Nav -->
+        <!-- Header -->
         <div class="overlap-group-2">
           <div class="frame"></div>
-          <a href="home.html"
-            ><img
+          <a href="home.html">
+            <img
               class="image"
               src="Images/draftdecklogo2.png"
               alt="Go to Home"
-          /></a>
+            />
+          </a>
           <div class="rectangle"></div>
           <div class="rectangle-2"></div>
           <a href="match.html"><div class="text-wrapper-32">Match</div></a>
@@ -32,8 +35,22 @@
           <a href="draftroom.html"
             ><div class="text-wrapper-37">Draftroom</div></a
           >
+
+          <!-- Hamburger Icon -->
           <div class="menu-bar">
-            <img class="img" src="Images/hamburger_menu.png" />
+            <img id="menu-icon" class="img" src="Images/hamburger_menu.png" />
+          </div>
+
+          <!-- Dropdown Menu -->
+          <div id="menu" class="menu-container">
+            <a href="home.html">Home</a>
+            <a href="myfantasyteam.html">My Fantasy Team</a>
+            <a href="helpfaq.html">Help/FAQ</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="settings.html">Settings</a>
+            <a href="about.html">About</a>
+            <a href="account.html">Account</a>
+            <a href="signout.html">Sign Out</a>
           </div>
         </div>
 

@@ -1,46 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Change Username</title>
-    <link rel="stylesheet" href="globals.css">
-    <link rel="stylesheet" href="changeusername.css">
-</head>
-<body>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="changeusername.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <script src="menu.js" defer></script>
+  </head>
+  <body>
     <div class="change-username">
-        <div class="div">
-      
-            <div class="overlap">
-            <a href="home.html"><div class="rectangle"></div>
-             <button type="submit" class="save-username-button">Save New Username</button></a>
-            </div>
-
-      
-            <div class="overlap-group">
-                <div class="group">
-                <div class="overlap-group-2">
-                <div class="frame"></div>
-                <a href="home.html">
-                <img class="image" src="Images/draftdecklogo2.png" alt="Go to Home">
-                </a>
-               </div>
-                </div>
-                <div class="menu-bar">
-                    <img class="img" src="Images/hamburger_menu.png" alt="Menu">
-                </div>
-            </div>
-
-            <label for="new-username" class="text-wrapper-3">New Username</label>
-            <input 
-                type="text" 
-                id="new-username" 
-                name="new-username" 
-                class="username-input"
-                placeholder="Enter new username"
-                aria-required="true"
-            >
+      <div class="div">
+        <!-- Save Button -->
+        <div class="overlap">
+          <a href="home.html">
+            <div class="rectangle"></div>
+            <button type="submit" class="save-username-button">
+              Save New Username
+            </button>
+          </a>
         </div>
+
+        <!-- Header, Logo, Menu -->
+        <div class="overlap-group">
+          <div class="group">
+            <div class="overlap-group-2">
+              <div class="frame"></div>
+              <a href="home.html">
+                <img
+                  class="image"
+                  src="Images/draftdecklogo2.png"
+                  alt="Go to Home"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- Hamburger Menu Icon -->
+          <div class="menu-bar">
+            <img
+              id="menu-icon"
+              class="img"
+              src="Images/hamburger_menu.png"
+              alt="Menu"
+            />
+          </div>
+
+          <!-- Dropdown Menu -->
+          <div id="menu" class="menu-container">
+            <a href="home.html">Home</a>
+            <a href="myfantasyteam.html">My Fantasy Team</a>
+            <a href="helpfaq.html">Help/FAQ</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="settings.html">Settings</a>
+            <a href="about.html">About</a>
+            <a href="account.html">Account</a>
+            <a href="signout.html">Sign Out</a>
+          </div>
+        </div>
+
+        <!-- Username Input -->
+        <label for="new-username" class="text-wrapper-3">New Username</label>
+        <input
+          type="text"
+          id="new-username"
+          name="new-username"
+          class="username-input"
+          placeholder="Enter new username"
+          aria-required="true"
+        />
+      </div>
     </div>
-</body>
+  </body>
 </html>

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <title>About</title>
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="menu.css" />
   </head>
   <body>
     <div class="about">
@@ -11,40 +13,119 @@
         <div class="overlap">
           <div class="text-wrapper">About Us</div>
           <p class="draftdeck-fantasy-is">
-            DraftDeck Fantasy is a National Football League draft website that aims to combine the addicting elements of
-            Fantasy football with the exciting aspect of trading cards. <br /><br />We are a small group of students
-            with a similar passion for sports. We have always been interested in fantasy sports and trading cards and it
-            is our goal to be able to combine the two to create one product.
+            DraftDeck Fantasy is a National Football League draft website that
+            aims to combine the addicting elements of Fantasy football with the
+            exciting aspect of trading cards. <br /><br />We are a small group
+            of students with a similar passion for sports. We have always been
+            interested in fantasy sports and trading cards and it is our goal to
+            be able to combine the two to create one product.
           </p>
           <div class="group">
             <div class="overlap-group">
               <div class="frame"></div>
-              <a href="home.html"><img class="image" src="Images/draftdecklogo2.png" alt="DraftDeck Logo. Go to Home"/> </a>
+              <a href="home.html"
+                ><img
+                  class="image"
+                  src="Images/draftdecklogo2.png"
+                  alt="DraftDeck Logo. Go to Home"
+                />
+              </a>
             </div>
           </div>
-          <img class="draftdeck-logo" src="Images/draftdecklogo.png" alt="Secondary DraftDeck Logo" />
+          <img
+            class="draftdeck-logo"
+            src="Images/draftdecklogo.png"
+            alt="Secondary DraftDeck Logo"
+          />
+
+          <!-- Hamburger Menu Button -->
           <div class="menu-bar">
-            <img class="img" src="Images/hamburger_menu.png" alt="Hamburger Menu" />
+            <img
+              id="menu-icon"
+              class="img"
+              src="Images/hamburger_menu.png"
+              alt="Hamburger Menu"
+            />
+          </div>
+
+          <!-- Dropdown Menu -->
+          <div id="menu" class="menu-container">
+            <a href="home.html">Home</a>
+            <a href="myfantasyteam.html">My Fantasy Team</a>
+            <a href="helpfaq.html">Help/FAQ</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="settings.html">Settings</a>
+            <a href="about.html">About</a>
+            <a href="account.html">Account</a>
+            <a href="signout.html">Sign Out</a>
           </div>
         </div>
+
         <div class="overlap-2">
           <div class="text-wrapper-2">Socials</div>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
-            ><img class="image-2" src="Images/twitter.svg" alt="Twitter Icon"
-          /></a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
-            ><img class="image-3" src="Images/facebook.svg" alt="Facebook Icon"
-          /></a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img class="image-2" src="Images/twitter.svg" alt="Twitter Icon" />
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="image-3"
+              src="Images/facebook.svg"
+              alt="Facebook Icon"
+            />
+          </a>
         </div>
+
         <div class="text-wrapper-3">Contact Us</div>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-          ><img class="image-4" src="Images/instagram.svg" alt="Instagram Icon"
-        /></a>
-        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
-          ><img class="image-5" src="Images/youtube.svg" alt="YouTube Icon"
-        /></a>
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="image-4"
+            src="Images/instagram.svg"
+            alt="Instagram Icon"
+          />
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+          <img class="image-5" src="Images/youtube.svg" alt="YouTube Icon" />
+        </a>
         <div class="text-wrapper-4">Support@DraftDeckFantasy.com</div>
       </div>
     </div>
+
+    <!-- Menu Toggle Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const menu = document.getElementById("menu");
+
+        menuIcon.addEventListener("click", function (event) {
+          event.stopPropagation();
+          menu.style.display =
+            menu.style.display === "block" ? "none" : "block";
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!menu.contains(event.target) && event.target !== menuIcon) {
+            menu.style.display = "none";
+          }
+        });
+
+        document.querySelectorAll("#menu a").forEach((link) => {
+          link.addEventListener("click", function () {
+            menu.style.display = "none";
+          });
+        });
+      });
+    </script>
   </body>
 </html>
