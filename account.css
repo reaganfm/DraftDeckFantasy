@@ -1,3 +1,9 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #16203d; /* ✅ Ensures full background */
+}
+
 .account {
   background-color: #16203d;
   display: flex;
@@ -9,9 +15,10 @@
 .account .div {
   background-color: #16203d;
   width: 1440px;
-  height: 1024px;
+  height: 1300px; /* ✅ Increased height to avoid cropping */
   position: relative;
 }
+
 
 .account .overlap-group {
   position: absolute;
