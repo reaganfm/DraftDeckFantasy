@@ -626,7 +626,7 @@
 
 .schedule .menu-bar img {
   width: 100px;
-  height: auto; 
+  height: auto;
   display: block;
 }
 
@@ -652,4 +652,29 @@
   width: 59px;
   height: 14px;
   left: 36px;
+}
+.schedule-weeks .week-block {
+  position: absolute;
+  left: 154px;
+  height: 30px;
+  width: 400px;
+}
+
+.week-label {
+  position: absolute;
+  width: 100px;
+  font-family: "Istok Web-Bold", Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fda311;
+}
+
+.matchup {
+  position: absolute;
+  left: 140px;
+  width: 200px;
+  font-family: "Istok Web-Bold", Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
 }
