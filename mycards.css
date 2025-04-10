@@ -1,5 +1,11 @@
-.my-cards {
+html, body {
+  height: 100%;
+  margin: 0;
   background-color: #16203d;
+}
+
+.my-cards {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -49,6 +55,7 @@
   height: 480px;
   cursor: pointer;
   perspective: 1000px;
+  position: relative;
 }
 
 .card {
@@ -76,18 +83,17 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 10px;
+  border-radius: 0px;
   overflow: hidden;
 }
 
 .card-face img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* shows entire image without cropping */
+  object-fit: contain;
   display: block;
-  border-radius: 10px;
+  border-radius: 0px;
 }
-
 
 .card .front {
   z-index: 2;
@@ -96,17 +102,6 @@
 
 .card .back {
   transform: rotateY(180deg);
-}
-
-.enlarged {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  height: 600px;
-  transform: translate(-50%, -50%) scale(1);
-  z-index: 1000;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .overlay {
@@ -120,7 +115,6 @@
   display: none;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -137,12 +131,266 @@
   }
 }
 
-/* Target Mahomes front only (card 8) */
-.card-grid .card-container:nth-child(8) .card-face.front img {
+.card-container[data-name="Mahomes"] .card-face.front img {
   transform: scale(1.15);
 }
 
-/* Target Ja'Marr front only (card 9) */
-.card-grid .card-container:nth-child(9) .card-face.front img {
-  transform: scale(1.20);
+.card-container[data-name="Ja'Marr"] .card-face.front img {
+  transform: scale(1.2);
+}
+
+.remove-btn {
+  color: white;
+  background-color: #1b263c;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 26px;
+  cursor: pointer;
+  position: absolute;
+  top: -12px;
+  right: -20px;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #fda311;
+  color: #16203d;
+  transform: scale(1.15);
+}
+
+#add-card-button:hover {
+  background-color: #2a3956;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+#add-card-section {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.edit-button-wrapper {
+  text-align: right;
+  padding: 0 40px 10px;
+}
+
+.styled-edit-btn {
+  background-color: #fda311;
+  color: #16203d;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Inter-Regular", Helvetica;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.styled-edit-btn:hover {
+  background-color: #ffb347;
+}
+
+.card-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-modal {
+  background-color: #1b263c;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  text-align: center;
+  width: 320px;
+  max-width: 90%;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-title {
+  font-family: "Inter-Regular", Helvetica;
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.modal-select {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: none;
+}
+
+.modal-preview {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 2px solid #ccc;
+}
+
+.modal-button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #fda311;
+  color: #16203d;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-button:hover {
+  background-color: #ffb347;
+}
+
+.modal-button.cancel {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #ccc;
+}
+
+.modal-button.cancel:hover {
+  background-color: #2a3956;
+}
+
+.card-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px 10px;
+  margin-top: 10px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 16px;
+  gap: 8px;
+}
+
+.back-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.back-button span {
+  color: white;
+}
+
+.back-button:hover span {
+  color: #fda311;
+}
+
+.close-btn {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background-color: #1b263c;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background-color: #fda311;
+  color: #16203d;
+  transform: scale(1.15);
+}
+
+.enlarged-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 600px;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  background-color: #0d1b29;
+  border-radius: 12px;
+  padding: 10px;
+  animation: fadeZoomIn 0.25s ease-out forwards;
+}
+
+@keyframes fadeZoomIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes fadeZoomOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+.enlarged-card.fade-out {
+  animation: fadeZoomOut 0.25s ease-out forwards;
+}
+
+.rotate-icon {
+  position: absolute;
+  top: 100%; /* places it below the enlarged card */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 12px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  z-index: 1002;
+  opacity: 0.8;
+  transition: transform 0.2s ease;
+}
+
+.rotate-icon:hover {
+  transform: translateX(-50%) scale(1.2);
+  opacity: 1;
+}
+
+.rotate-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
