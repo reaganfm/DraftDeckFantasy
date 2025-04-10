@@ -1,48 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <title>Notifications</title>
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="notifications.css" />
-
-    <style>
-      /* Basic styling for the menu */
-      .menu-container {
-          position: absolute;
-          top: 50px;
-          right: 10px;
-          background: white;
-          padding: 10px;
-          border: 1px solid #ccc;
-          display: none; /* Initially hidden */
-          width: 200px;
-          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      .menu-container a {
-          display: block;
-          padding: 10px;
-          text-decoration: none;
-          color: black;
-      }
-
-      .menu-container a:hover {
-          background: lightgray;
-      }
-
-      /* Style for the menu button */
-      .menu-bar {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-      }
-
-      .menu-bar img {
-          width: 40px;
-      }
-  </style>
-
+    <link rel="stylesheet" href="menu.css" />
+    <script src="menu.js" defer></script>
   </head>
   <body>
     <div class="notifications">
@@ -62,50 +26,54 @@
           <div class="text-wrapper-2">News</div>
           <div class="text-wrapper-3">Team</div>
           <div class="text-wrapper-4">Deadlines</div>
+
           <div class="group">
             <div class="overlap-group">
               <div class="rectangle-9"></div>
               <div class="text-wrapper-5">User256 wants to trade</div>
             </div>
           </div>
+
           <div class="rectangle-10"></div>
           <div class="text-wrapper-6">Player Injured</div>
-          <p class="p">You have until tomorrow to make finalization for this weeks match up</p>
+          <p class="p">
+            You have until tomorrow to make finalization for this week's match
+            up
+          </p>
+
           <div class="frame-2"></div>
-          <a href="home.html"><img class="image" src="Images/draftdecklogo2.png" alt="Go to Home"/> </a>
+          <a href="home.html"
+            ><img
+              class="image"
+              src="Images/draftdecklogo2.png"
+              alt="Go to Home"
+          /></a>
           <img class="screenshot" src="Images/news.svg" />
           <img class="img" src="Images/messages.svg" />
+
+          <!-- Hamburger -->
           <div class="menu-bar">
-            <img class="menu-img" src="Images/hamburger_menu.png" />
+            <img
+              id="menu-icon"
+              class="menu-img"
+              src="Images/hamburger_menu.png"
+              alt="Menu"
+            />
+          </div>
+
+          <!-- Dropdown menu -->
+          <div id="menu" class="menu-container">
+            <a href="home.html">Home</a>
+            <a href="myfantasyteam.html">My Fantasy Team</a>
+            <a href="helpfaq.html">Help/FAQ</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="settings.html">Settings</a>
+            <a href="about.html">About</a>
+            <a href="account.html">Account</a>
+            <a href="signout.html">Sign Out</a>
           </div>
         </div>
       </div>
     </div>
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-          const menuIcon = document.getElementById("menu-icon");
-          const menu = document.getElementById("menu");
-
-          menuIcon.addEventListener("click", function (event) {
-              event.stopPropagation();
-              menu.style.display = menu.style.display === "block" ? "none" : "block";
-          });
-
-          document.addEventListener("click", function (event) {
-              if (!menu.contains(event.target) && event.target !== menuIcon) {
-                  menu.style.display = "none";
-              }
-          });
-
-          // Close menu when clicking a menu link
-          document.querySelectorAll("#menu a").forEach(link => {
-              link.addEventListener("click", function () {
-                  menu.style.display = "none";
-              });
-          });
-      });
-  </script>
-
   </body>
 </html>

@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   background-color: #16203d; /* ✅ Ensures full background */
@@ -18,7 +19,6 @@ html, body {
   height: 1300px; /* ✅ Increased height to avoid cropping */
   position: relative;
 }
-
 
 .account .overlap-group {
   position: absolute;
@@ -92,7 +92,7 @@ html, body {
 
 .account .menu-bar img {
   width: 100px;
-  height: auto; 
+  height: auto;
   display: block;
 }
 
@@ -168,13 +168,12 @@ html, body {
   object-fit: cover;
 }
 
-
 .my-cards-link {
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .my-cards-link .overlap {
-  cursor: pointer; 
+  cursor: pointer;
   position: absolute;
   top: 707px;
   left: 94px;

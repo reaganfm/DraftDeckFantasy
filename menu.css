@@ -1,10 +1,10 @@
 .menu-container {
+  position: fixed; /* <- changed from absolute */
+  top: 130px; /* consistent offset from the top of the screen */
+  right: 55px; /* consistent from the right */
   background-color: rgba(255, 255, 255, 0.699);
   border-radius: 20px;
   padding: 20px;
-  position: absolute;
-  top: 280px; 
-  right: 55px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 100;
   font-family: Arial, sans-serif;
