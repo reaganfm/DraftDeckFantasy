@@ -106,3 +106,10 @@ input:focus {
 .overlap-2 a:hover, .overlap-3 a:hover {
   background-color: #d78c0e;
 }
+/* Add styling for the error message under the password input */
+.error-message {
+  font-size: 14px;
+  color: red;
+  margin-top: 5px;
+  text-align: left;
+}

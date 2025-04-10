@@ -15,15 +15,19 @@
 
         <div class="text-wrapper-2">Sign in using username</div>
 
-        <form id="loginForm" action="login.php" method="POST">
+        <form id="loginForm">
           <div class="input-container">
             <label for="username" class="text-wrapper-7">Username</label>
             <input type="text" id="username" name="username" required />
+            <!-- Error message will be inserted here -->
+            <div id="usernameError" class="error-message"></div>
           </div>
 
           <div class="input-container">
             <label for="password" class="text-wrapper-9">Password</label>
             <input type="password" id="password" name="password" required />
+            <!-- Error message will be inserted here -->
+            <div id="passwordError" class="error-message"></div>
           </div>
 
           <button type="submit" class="continue-button">Continue</button>
@@ -31,27 +35,21 @@
 
         <div class="text-wrapper-4">Don’t have an account?</div>
         <div class="overlap-2">
-          <a href="signup.html"><div class="rectangle-2"></div>
-            <div class="text-wrapper-5">Sign Up</div></a>
+          <a href="signup.html">
+            <div class="rectangle-2"></div>
+            <div class="text-wrapper-5">Sign Up</div>
+          </a>
         </div>
 
         <div class="overlap-3">
-          <a href="forgotpassword.html"><div class="rectangle-3"></div>
-            <div class="text-wrapper-8">Forgot password?</div></a>
+          <a href="forgotpassword.html">
+            <div class="rectangle-3"></div>
+            <div class="text-wrapper-8">Forgot password?</div>
+          </a>
         </div>
       </div>
     </div>
 
-    <script>
-      document.getElementById("loginForm").addEventListener("submit", function (event) {
-        const username = document.getElementById("username").value.trim();
-        const password = document.getElementById("password").value.trim();
-
-        if (username === "" || password === "") {
-          event.preventDefault();
-          alert("Please fill out both fields.");
-        }
-      });
-    </script>
+    <script src="login.js"></script>
   </body>
 </html>
