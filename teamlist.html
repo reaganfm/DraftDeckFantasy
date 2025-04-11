@@ -1,53 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <title>Team List</title>
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="teamlist.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <script src="menu.js" defer></script>
   </head>
   <body>
     <div class="team-list">
       <div class="div">
-        <a href="mycards.html"><div class="overlap">
-          <div class="text-wrapper">My Cards</div>
-          <img class="vector" src="Images/arrow.svg" /></a>
-        </div>
+        <a href="mycards.html">
+          <div class="overlap">
+            <div class="text-wrapper">My Cards</div>
+            <img class="vector" src="Images/arrow.svg" />
+          </div>
+        </a>
+
         <div class="text-wrapper-2">Starting Lineup</div>
         <div class="text-wrapper-3">Player News</div>
         <div class="text-wrapper-4">Trades</div>
         <div class="text-wrapper-5">Schedule</div>
+
         <div class="overlap-group">
           <div class="text-wrapper-6">Bench</div>
           <img class="image" src="Images/TradingCards/Mahomes_card.png" />
         </div>
+
         <div class="screenshot-wrapper">
           <img class="screenshot" src="Images/schedule.svg" />
         </div>
+
         <div class="overlap-2">
           <div class="rectangle"></div>
           <img class="slide" src="Images/trade1.svg" />
           <img class="slide-2" src="Images/trade2.svg" />
           <img class="slide-3" src="Images/trade3.svg" />
         </div>
+
         <div class="overlap-3">
           <div class="group">
             <div class="overlap-group-2">
               <div class="frame"></div>
-              <a href="home.html"><img class="image-2" src="Images/draftdecklogo2.png" alt="Go to Home"/> </a>
+              <a href="home.html">
+                <img
+                  class="image-2"
+                  src="Images/draftdecklogo2.png"
+                  alt="Go to Home"
+                />
+              </a>
             </div>
           </div>
           <div class="rectangle-2"></div>
           <div class="rectangle-3"></div>
           <a href="match.html"><div class="text-wrapper-7">Match</div></a>
           <div class="text-wrapper-8">Team List</div>
-          <a href="playerlist.html"><div class="text-wrapper-9">Player list</div></a>
+          <a href="playerlist.html"
+            ><div class="text-wrapper-9">Player list</div></a
+          >
           <a href="league.html"><div class="text-wrapper-10">League</div></a>
-          <a href="schedule.html"><div class="text-wrapper-11">Schedule</div></a>
-          <a href="draftroom.html"><div class="text-wrapper-12">Draftroom</div></a>
+          <a href="schedule.html"
+            ><div class="text-wrapper-11">Schedule</div></a
+          >
+          <a href="draftroom.html"
+            ><div class="text-wrapper-12">Draftroom</div></a
+          >
+
+          <!-- Hamburger icon -->
           <div class="menu-bar">
-            <img class="menu-img" src="Images/hamburger_menu.png" />
+            <img
+              id="menu-icon"
+              class="menu-img"
+              src="Images/hamburger_menu.png"
+              alt="Menu"
+            />
+          </div>
+
+          <!-- Dropdown Menu -->
+          <div id="menu" class="menu-container">
+            <a href="home.html">Home</a>
+            <a href="myfantasyteam.html">My Fantasy Team</a>
+            <a href="helpfaq.html">Help/FAQ</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="settings.html">Settings</a>
+            <a href="about.html">About</a>
+            <a href="account.html">Account</a>
+            <a href="signout.html">Sign Out</a>
           </div>
         </div>
+
+        <!-- Trading Cards -->
         <img class="image-3" src="Images/TradingCards/Lamar.png" />
         <img class="image-4" src="Images/TradingCards/Kamara_Card.png" />
         <img class="image-5" src="Images/TradingCards/Saquon_Card.png" />
@@ -57,17 +100,22 @@
         <img class="image-9" src="Images/TradingCards/Bijan_Card.png" />
         <img class="image-10" src="Images/TradingCards/Lamar.png" />
         <img class="image-11" src="Images/TradingCards/Kupp_Card.png" />
+
         <div class="overlap-4">
           <img class="screenshot-2" src="Images/playernews2.svg" />
           <img class="screenshot-3" src="Images/playernews3.svg" />
           <img class="screenshot-4" src="Images/playernews1.svg" />
           <div class="rectangle-4"></div>
         </div>
+
         <img class="image-12" src="Images/TradingCards/Pickens_Card.png" />
         <img class="image-13" src="Images/TradingCards/Kamara_Card.png" />
         <img class="image-14" src="Images/TradingCards/Saquon_Card.png" />
         <img class="image-15" src="Images/TradingCards/AmonRa_Card.png" />
-        <img class="image-16" src="Images/TradingCards/Xavier_worthy_card.png" />
+        <img
+          class="image-16"
+          src="Images/TradingCards/Xavier_worthy_card.png"
+        />
       </div>
     </div>
     <script src="teamlist.js"></script>

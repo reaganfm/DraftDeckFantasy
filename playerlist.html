@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <title>Player List</title>
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="playerlist.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <script src="menu.js" defer></script>
   </head>
   <body>
     <div class="player-list">
@@ -23,19 +26,49 @@
         <div class="opponent-opponent">
           Opponent<br />Opponent<br />Opponent<br />Opponent<br />Opponent<br />Opponent<br />Opponent<br />Opponent<br />Opponent<br />Opponent<br />Opponent<br />Opponent<br />Opponent<br />Opponent<br />Opponent
         </div>
+
+        <!-- Header -->
         <div class="overlap-group">
           <div class="frame"></div>
-          <a href="home.html"><img class="image" src="Images/draftdecklogo2.png" alt="Go to Home"/> </a>
+          <a href="home.html"
+            ><img
+              class="image"
+              src="Images/draftdecklogo2.png"
+              alt="Go to Home"
+          /></a>
           <div class="rectangle"></div>
           <div class="rectangle-2"></div>
           <a href="match.html"><div class="text-wrapper">Match</div></a>
-          <a href="teamlist.html"><div class="text-wrapper-2">Team List</div></a>
+          <a href="teamlist.html"
+            ><div class="text-wrapper-2">Team List</div></a
+          >
           <div class="text-wrapper-3">Player list</div>
           <a href="league.html"><div class="text-wrapper-4">League</div></a>
           <a href="schedule.html"><div class="text-wrapper-5">Schedule</div></a>
-          <a href="draftroom.html"><div class="text-wrapper-6">Draftroom</div></a>
+          <a href="draftroom.html"
+            ><div class="text-wrapper-6">Draftroom</div></a
+          >
+
+          <!-- Hamburger Icon -->
           <div class="menu-bar">
-            <img class="img" src="Images/hamburger_menu.png" />
+            <img
+              id="menu-icon"
+              class="img"
+              src="Images/hamburger_menu.png"
+              alt="Menu Icon"
+            />
+          </div>
+
+          <!-- Dropdown Menu -->
+          <div id="menu" class="menu-container">
+            <a href="home.html">Home</a>
+            <a href="myfantasyteam.html">My Fantasy Team</a>
+            <a href="helpfaq.html">Help/FAQ</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="settings.html">Settings</a>
+            <a href="about.html">About</a>
+            <a href="account.html">Account</a>
+            <a href="signout.html">Sign Out</a>
           </div>
         </div>
       </div>
