@@ -1,34 +1,94 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="signup.css" />
-  </head>
-  <body>
-    <div class="sign-up">
-      <div class="div">
-        <div class="overlap">
-          <div class="text-wrapper">Sign Up</div>
-          <div class="group">
-            <div class="overlap-group">
-              <div class="frame"></div>
-              <img class="image" src="Images/draftdecklogo2.png" />
-            </div>
-          </div>
-        </div>
-        <div class="div-wrapper"><div class="text-wrapper-2">Enter new username</div></div>
-        <div class="text-wrapper-3">Username</div>
-        <div class="frame-2"><div class="text-wrapper-2">Enter password</div></div>
-        <div class="text-wrapper-4">Password</div>
-        <div class="frame-3"><div class="text-wrapper-2">Enter email address</div></div>
-        <div class="text-wrapper-5">Email</div>
-        <div class="overlap-2">
-          <a href="login.html" class="rectangle">
-            <div class="text-wrapper-6">Create an Account</div>
-          </a>
-        </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <div class="sign-up">
+    <div class="div">
+      <img class="logo" src="Images/draftdecklogo2.png" alt="DraftDeck Logo" />
+      <div class="text-wrapper">Sign Up</div>
+      <div class="text-wrapper-2">Welcome, new member. Let’s get started.</div>
+      <div class="username-field">
+        <label for="username" class="label">Create Username</label>
+        <input type="text" id="username" class="input-field" />
+        <div id="usernameError" class="error-message"></div> <!-- Error message for username -->
+      </div>
+      <div class="email-field">
+        <label for="email" class="label">Your Email</label>
+        <input type="email" id="email" class="input-field" />
+        <div id="emailError" class="error-message"></div> <!-- Error message for email -->
+      </div>
+      <div class="password-field">
+        <label for="password" class="label">Create Password</label>
+        <input type="password" id="password" class="input-field" />
+        <div id="passwordError" class="error-message"></div> <!-- Error message for password -->
+      </div>
+      <button class="rectangle" onclick="validateAndSubmit()">Create Account</button>
+      <div class="login-link">
+        Already have an account? <a href="login.html">Log in</a>
       </div>
     </div>
-  </body>
+  </div>
+
+  <script>
+    function validateAndSubmit() {
+      const usernameEl = document.getElementById("username");
+      const emailEl = document.getElementById("email");
+      const passwordEl = document.getElementById("password");
+
+      const username = usernameEl.value.trim();
+      const email = emailEl.value.trim();
+      const password = passwordEl.value;
+
+      // Get error containers
+      const usernameError = document.getElementById("usernameError");
+      const emailError = document.getElementById("emailError");
+      const passwordError = document.getElementById("passwordError");
+
+      // Reset error messages
+      usernameError.textContent = "";
+      emailError.textContent = "";
+      passwordError.textContent = "";
+
+      // Reset error classes
+      [usernameEl, emailEl, passwordEl].forEach(el => el.classList.remove("input-error"));
+
+      let hasError = false;
+
+      // Validate username
+      if (username.length < 5) {
+        usernameEl.classList.add("input-error");
+        usernameError.textContent = "Username must be at least 5 characters long.";
+        hasError = true;
+      }
+
+      // Validate email using regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        emailEl.classList.add("input-error");
+        emailError.textContent = "Please enter a valid email address.";
+        hasError = true;
+      }
+
+      // Validate password
+      const capitalLetterRegex = /[A-Z]/;
+      const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+      if (password.length < 6 || !capitalLetterRegex.test(password) || !specialCharRegex.test(password)) {
+        passwordEl.classList.add("input-error");
+        passwordError.textContent = "Password must be at least 6 characters long, with one capital letter and one special character.";
+        hasError = true;
+      }
+
+      // If no errors, submit the form
+      if (!hasError) {
+        alert("Account created successfully!");
+        window.location.href = "home.html";
+      }
+    }
+  </script>
+</body>
 </html>

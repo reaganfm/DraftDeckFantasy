@@ -1,5 +1,23 @@
+/* Base styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff8ee;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  height: 100vh;
+}
+
+/* Login section */
 .login {
   background-color: #16203d;
+  background-image: url("Images/football-background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -10,35 +28,40 @@
 
 .login .div {
   background-color: #16203d;
-  width: 450px;
+  width: 400px; /* Adjusted width to match sign-up */
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  text-align: center;
+  animation: fadeSlideUp 1s ease-out forwards;
+  opacity: 0;
 }
 
-/* Updated Logo Styling */
+/* Logo styling */
 .login .logo {
-  width: 250px; /* Increased size */
-  margin-bottom: 10px; /* Reduced space between logo and login text */
+  width: 250px; /* Matching logo size with sign-up */
+  margin-bottom: 10px;
 }
 
+/* Headings */
 .login .text-wrapper {
-  font-family: "Segoe UI-Bold", Helvetica;
+  font-family: "Segoe UI-Bold", Helvetica, sans-serif;
   font-weight: 700;
   color: #fda311;
   font-size: 32px;
+  text-align: left;
   margin-bottom: 20px;
 }
 
 .login .text-wrapper-2 {
-  font-family: "Istok Web-Bold", Helvetica;
+  font-family: "Istok Web-Bold", Helvetica, sans-serif;
   font-weight: 700;
   color: #a2a2a2;
   font-size: 18px;
+  text-align: left;
   margin-bottom: 20px;
 }
 
+/* Input containers */
 .input-container {
   display: flex;
   flex-direction: column;
@@ -46,27 +69,50 @@
   margin-bottom: 15px;
 }
 
+/* Labels */
 label {
-  font-family: "Istok Web-Bold", Helvetica;
+  font-family: "Istok Web-Bold", Helvetica, sans-serif;
   font-weight: 700;
   color: #fda311;
   font-size: 16px;
   margin-bottom: 5px;
 }
 
+/* Input fields */
 input {
-  width: 100%;
-  padding: 12px;
+  width: calc(100% - 27px); /* Adjusted to match sign-up field */
   font-size: 16px;
+  padding: 12px;
   border: 2px solid #fda311;
   border-radius: 5px;
   outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 15px;
 }
 
 input:focus {
   border-color: #ffffff;
+  box-shadow: 0 0 8px rgba(253, 163, 17, 0.4);
 }
 
+input:hover {
+  border-color: #ffffff;
+}
+
+/* Error message style */
+.error-message {
+  font-size: 14px;
+  color: red;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-error {
+  border: 2px solid red !important;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+}
+
+/* Button styling */
 .continue-button {
   width: 100%;
   padding: 12px;
@@ -76,40 +122,52 @@ input:focus {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 15px; /* Added margin to match spacing from sign-up */
 }
 
 .continue-button:hover {
   background-color: #d78c0e;
+  transform: scale(1.03);
 }
 
+/* Login link below button */
 .text-wrapper-4 {
-  font-family: "Istok Web-Bold", Helvetica;
+  font-family: "Istok Web-Bold", Helvetica, sans-serif;
   font-weight: 700;
   color: #ffffff;
   font-size: 14px;
   margin-top: 10px;
 }
 
-.overlap-2 a, .overlap-3 a {
+/* Login link styling */
+.login-link {
+  font-family: "Istok Web-Bold", Helvetica, sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 14px;
+  margin-top: 20px;
   text-decoration: none;
   display: inline-block;
   padding: 8px 12px;
-  background-color: #fda311;
-  color: #ffffff;
+  background-color: #fda311; /* Make background color visible */
   border-radius: 5px;
-  margin-top: 5px;
-  font-size: 14px;
-  font-weight: bold;
+  transition: background-color 0.3s ease, text-decoration 0.3s ease;
 }
 
-.overlap-2 a:hover, .overlap-3 a:hover {
-  background-color: #d78c0e;
+.login-link:hover {
+  background-color: #9c6300; /* Change color on hover */
+  text-decoration: underline; /* Underline text on hover */
 }
-/* Add styling for the error message under the password input */
-.error-message {
-  font-size: 14px;
-  color: red;
-  margin-top: 5px;
-  text-align: left;
+
+/* Entrance animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
