@@ -17,7 +17,7 @@
   position: absolute;
   width: 275px;
   height: 77px;
-  top: 825px;
+  top: 600px; /* 🔼 Moved it up from 825px */
   left: 583px;
 }
 
