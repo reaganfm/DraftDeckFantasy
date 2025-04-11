@@ -5,6 +5,7 @@
     <title>My Fantasy Team</title>
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="myfantasyteam.css" />
+    <link rel="stylesheet" href="menu.css" />
   </head>
   <body>
     <div class="my-fantasy-team">
@@ -25,9 +26,8 @@
           <a href="home.html">
             <img class="image" src="Images/draftdecklogo2.png" alt="Go to Home" />
           </a>
-          <div class="menu-bar">
-            <img id="menu-icon" class="img" src="Images/hamburger_menu.png" alt="Menu" />
-          </div>
+          <!-- Reusable Menu Placeholder -->
+<div id="menu-placeholder"></div>
         </div>
 
         <!-- Hidden menu with links -->
@@ -53,7 +53,34 @@
       </div>
     </div>
 
-    <!-- Link to your menu.js file -->
-    <script src="menu.js"></script>
+ <!-- Load and activate the reusable menu -->
+<script>
+  fetch("menu.html")
+    .then((res) => res.text())
+    .then((data) => {
+      document.getElementById("menu-placeholder").innerHTML = data;
+
+      // Reattach menu functionality after it's loaded
+      const menuIcon = document.getElementById("menu-icon");
+      const menu = document.getElementById("menu");
+
+      menuIcon.addEventListener("click", function (event) {
+        event.stopPropagation();
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target) && event.target !== menuIcon) {
+          menu.style.display = "none";
+        }
+      });
+
+      document.querySelectorAll("#menu a").forEach((link) => {
+        link.addEventListener("click", function () {
+          menu.style.display = "none";
+        });
+      });
+    });
+</script>
   </body>
 </html>

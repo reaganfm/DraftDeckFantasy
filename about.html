@@ -38,28 +38,8 @@
             alt="Secondary DraftDeck Logo"
           />
 
-          <!-- Hamburger Menu Button -->
-          <div class="menu-bar">
-            <img
-              id="menu-icon"
-              class="img"
-              src="Images/hamburger_menu.png"
-              alt="Hamburger Menu"
-            />
-          </div>
-
-          <!-- Dropdown Menu -->
-          <div id="menu" class="menu-container">
-            <a href="home.html">Home</a>
-            <a href="myfantasyteam.html">My Fantasy Team</a>
-            <a href="helpfaq.html">Help/FAQ</a>
-            <a href="notifications.html">Notifications</a>
-            <a href="settings.html">Settings</a>
-            <a href="about.html">About</a>
-            <a href="account.html">Account</a>
-            <a href="signout.html">Sign Out</a>
-          </div>
-        </div>
+         <!-- Reusable Menu Placeholder -->
+<div id="menu-placeholder"></div>
 
         <div class="overlap-2">
           <div class="text-wrapper-2">Socials</div>
@@ -102,30 +82,34 @@
       </div>
     </div>
 
-    <!-- Menu Toggle Script -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuIcon = document.getElementById("menu-icon");
-        const menu = document.getElementById("menu");
+    <!-- Load and activate the reusable menu -->
+<script>
+  fetch("menu.html")
+    .then((res) => res.text())
+    .then((data) => {
+      document.getElementById("menu-placeholder").innerHTML = data;
 
-        menuIcon.addEventListener("click", function (event) {
-          event.stopPropagation();
-          menu.style.display =
-            menu.style.display === "block" ? "none" : "block";
-        });
+      // Reattach menu functionality after it's loaded
+      const menuIcon = document.getElementById("menu-icon");
+      const menu = document.getElementById("menu");
 
-        document.addEventListener("click", function (event) {
-          if (!menu.contains(event.target) && event.target !== menuIcon) {
-            menu.style.display = "none";
-          }
-        });
+      menuIcon.addEventListener("click", function (event) {
+        event.stopPropagation();
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      });
 
-        document.querySelectorAll("#menu a").forEach((link) => {
-          link.addEventListener("click", function () {
-            menu.style.display = "none";
-          });
+      document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target) && event.target !== menuIcon) {
+          menu.style.display = "none";
+        }
+      });
+
+      document.querySelectorAll("#menu a").forEach((link) => {
+        link.addEventListener("click", function () {
+          menu.style.display = "none";
         });
       });
-    </script>
+    });
+</script>
   </body>
 </html>

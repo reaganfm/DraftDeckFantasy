@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="match.css" />
+    <link rel="stylesheet" href="menu.css" />
   </head>
   <body>
     <div class="match">
@@ -28,9 +29,8 @@
           <a href="league.html"><div class="text-wrapper-7">League</div></a>
           <a href="schedule.html"><div class="text-wrapper-8">Schedule</div></a>
           <a href="draftroom.html"><div class="text-wrapper-9">Draftroom</div></a>
-          <div class="menu-bar">
-            <img class="img" src="Images/hamburger_menu.png" />
-          </div>
+         <!-- Reusable Menu Placeholder -->
+<div id="menu-placeholder"></div>
         </div>
         <div class="group">
           <div class="overlap-3">
@@ -140,5 +140,34 @@
         </div>
       </div>
     </div>
+    <!-- Load and activate the reusable menu -->
+<script>
+  fetch("menu.html")
+    .then((res) => res.text())
+    .then((data) => {
+      document.getElementById("menu-placeholder").innerHTML = data;
+
+      // Reattach menu functionality after it's loaded
+      const menuIcon = document.getElementById("menu-icon");
+      const menu = document.getElementById("menu");
+
+      menuIcon.addEventListener("click", function (event) {
+        event.stopPropagation();
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target) && event.target !== menuIcon) {
+          menu.style.display = "none";
+        }
+      });
+
+      document.querySelectorAll("#menu a").forEach((link) => {
+        link.addEventListener("click", function () {
+          menu.style.display = "none";
+        });
+      });
+    });
+</script>
   </body>
 </html>

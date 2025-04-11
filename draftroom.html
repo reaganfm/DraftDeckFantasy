@@ -34,24 +34,8 @@
           <a href="league.html"><div class="text-wrapper-4">League</div></a>
           <a href="schedule.html"><div class="text-wrapper-5">Schedule</div></a>
           <div class="text-wrapper-6">Draftroom</div>
-          <div class="menu-bar">
-            <img
-              id="menu-icon"
-              class="img"
-              src="Images/hamburger_menu.png"
-              alt="Menu"
-            />
-          </div>
-          <div id="menu" class="menu-container">
-            <a href="home.html">Home</a>
-            <a href="myfantasyteam.html">My Fantasy Team</a>
-            <a href="helpfaq.html">Help/FAQ</a>
-            <a href="notifications.html">Notifications</a>
-            <a href="settings.html">Settings</a>
-            <a href="about.html">About</a>
-            <a href="account.html">Account</a>
-            <a href="signout.html">Sign Out</a>
-          </div>
+          <!-- Reusable Menu Placeholder -->
+<div id="menu-placeholder"></div>
         </div>
         <div class="overlap-group">
           <div class="text-wrapper-7">Draft Board</div>
@@ -298,5 +282,34 @@
         </div>
       </div>
     </div>
+    <!-- Load and activate the reusable menu -->
+<script>
+  fetch("menu.html")
+    .then((res) => res.text())
+    .then((data) => {
+      document.getElementById("menu-placeholder").innerHTML = data;
+
+      // Reattach menu functionality after it's loaded
+      const menuIcon = document.getElementById("menu-icon");
+      const menu = document.getElementById("menu");
+
+      menuIcon.addEventListener("click", function (event) {
+        event.stopPropagation();
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target) && event.target !== menuIcon) {
+          menu.style.display = "none";
+        }
+      });
+
+      document.querySelectorAll("#menu a").forEach((link) => {
+        link.addEventListener("click", function () {
+          menu.style.display = "none";
+        });
+      });
+    });
+</script>
   </body>
 </html>

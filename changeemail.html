@@ -6,6 +6,7 @@
     <title>Change Email</title>
     <link rel="stylesheet" href="globals.css">
     <link rel="stylesheet" href="changeemail.css">
+    <link rel="stylesheet" href="menu.css" />
 </head>
 <body>
     <div class="change-email">
@@ -26,9 +27,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="menu-bar">
-                    <img class="img" src="Images/hamburger_menu.png" alt="Menu">
-                </div>
+                <!-- Reusable Menu Placeholder -->
+                    <div id="menu-placeholder"></div>
             </div>
 
             <!-- Email Input Field -->
@@ -47,5 +47,34 @@
 
         </div>
     </div>
+    <!-- Load and activate the reusable menu -->
+<script>
+    fetch("menu.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("menu-placeholder").innerHTML = data;
+  
+        // Reattach menu functionality after it's loaded
+        const menuIcon = document.getElementById("menu-icon");
+        const menu = document.getElementById("menu");
+  
+        menuIcon.addEventListener("click", function (event) {
+          event.stopPropagation();
+          menu.style.display = menu.style.display === "block" ? "none" : "block";
+        });
+  
+        document.addEventListener("click", function (event) {
+          if (!menu.contains(event.target) && event.target !== menuIcon) {
+            menu.style.display = "none";
+          }
+        });
+  
+        document.querySelectorAll("#menu a").forEach((link) => {
+          link.addEventListener("click", function () {
+            menu.style.display = "none";
+          });
+        });
+      });
+  </script>  
 </body>
 </html>
