@@ -145,13 +145,14 @@
   font-size: 70px;
   text-align: center;
   letter-spacing: 0;
+  padding-top: 120px;
   line-height: normal;
 }
 
 .about .image-2 {
   width: 93px;
   height: 93px;
-  top: 91px;
+  bottom: -130px;
   left: 0;
   position: absolute;
   object-fit: cover;
@@ -160,7 +161,7 @@
 .about .image-3 {
   width: 94px;
   height: 94px;
-  top: 90px;
+  bottom: -130px;
   left: 142px;
   position: absolute;
   object-fit: cover;
@@ -174,6 +175,7 @@
   font-weight: 700;
   color: #fda311;
   font-size: 70px;
+  padding-top: 120px;
   text-align: center;
   letter-spacing: 0;
   line-height: normal;
@@ -182,7 +184,7 @@
 .about .image-4 {
   width: 118px;
   height: 118px;
-  top: 861px;
+  bottom: -173px;
   left: 100px;
   position: absolute;
   object-fit: cover;
@@ -191,7 +193,7 @@
 .about .image-5 {
   width: 94px;
   height: 94px;
-  top: 874px;
+  bottom: -160px;
   left: 537px;
   position: absolute;
   object-fit: cover;
@@ -203,6 +205,7 @@
   left: 875px;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
+  padding-top: 120px;
   color: #ffffff;
   font-size: 33px;
   text-align: center;
