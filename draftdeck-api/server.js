@@ -9,23 +9,31 @@ app.use(express.json());
 
 console.log("Using RapidAPI Key:", process.env.RAPIDAPI_KEY);
 
-// 🏈 NFL player-to-team map
-const playerTeamMap = {
-  mahomes: 33,
-  kelce: 33,
-  kittle: 91,
-  bosa: 91,
-  jefferson: 37,
-  chase: 35,
-  allen: 34,
-  hurts: 39,
-  prescott: 38
+// ✅ Verified NFL team IDs
+const nflTeamMap = {
+  "Kansas City Chiefs": 66,
+  "San Francisco 49ers": 78,
+  "Minnesota Vikings": 71,
+  "Cincinnati Bengals": 57,
+  "Buffalo Bills": 54,
+  "Philadelphia Eagles": 76,
+  "Dallas Cowboys": 59
 };
 
-const SPORT_ID = 1; // NFL
+// 🔒 Map player search terms to correct team ID
+const playerTeamMap = {
+  mahomes: nflTeamMap["Kansas City Chiefs"],
+  kelce: nflTeamMap["Kansas City Chiefs"],
+  kittle: nflTeamMap["San Francisco 49ers"],
+  bosa: nflTeamMap["San Francisco 49ers"],
+  jefferson: nflTeamMap["Minnesota Vikings"],
+  chase: nflTeamMap["Cincinnati Bengals"],
+  allen: nflTeamMap["Buffalo Bills"],
+  hurts: nflTeamMap["Philadelphia Eagles"],
+  prescott: nflTeamMap["Dallas Cowboys"]
+};
 
 app.get('/api/search-player', async (req, res) => {
-  // ✅ Bulletproof query extraction
   const rawQuery = req.query.q;
 
   if (typeof rawQuery !== 'string' || !rawQuery.trim()) {
@@ -34,7 +42,6 @@ app.get('/api/search-player', async (req, res) => {
 
   const searchName = rawQuery.trim().toLowerCase();
 
-  // 🔍 Find matching key from playerTeamMap
   const matchedEntry = Object.entries(playerTeamMap).find(([key]) =>
     searchName.includes(key)
   );
@@ -55,17 +62,21 @@ app.get('/api/search-player', async (req, res) => {
 
     const players = playersRes.data.players;
 
-    if (!Array.isArray(players)) {
-      return res.status(500).json({ error: "No players found for this team." });
-    }
+    console.log("🔎 Players from team", teamId, "→", players.map(p =>
+      p.name || `${p.first_name || ''} ${p.last_name || ''}` || "NO_NAME"
+    ));
 
-    const matches = players.filter(player =>
-      player.name.toLowerCase().includes(searchName)
-    );
+    const matches = players.filter(player => {
+      const fullName = `${player.first_name || ''} ${player.last_name || ''}`.toLowerCase();
+      const displayName = (player.name || '').toLowerCase();
+      return fullName.includes(searchName) || displayName.includes(searchName);
+    });
 
     if (matches.length === 0) {
       return res.status(404).json({ error: `Player '${searchName}' not found on team.` });
     }
+
+    const match = matches[0];
 
     let stats = {};
     try {
@@ -77,18 +88,17 @@ app.get('/api/search-player', async (req, res) => {
       });
 
       stats = statsRes.data.players?.find(p =>
-        p.participant_id === matches[0].participant_id
+        p.participant_id === match.participant_id
       )?.statistics || {};
-
     } catch (err) {
-      console.warn(`Stats not found for player '${searchName}'`);
+      console.warn(`⚠️ Stats not found for player '${searchName}'`);
     }
 
     res.json({
       results: [
         {
-          id: matches[0].participant_id,
-          name: matches[0].name,
+          id: match.participant_id,
+          name: match.name || `${match.first_name} ${match.last_name}`,
           team_id: teamId,
           stats
         }
@@ -96,12 +106,12 @@ app.get('/api/search-player', async (req, res) => {
     });
 
   } catch (error) {
-    console.error("Search failed:", error.response?.data || error.message);
+    console.error("❌ Search failed:", error.response?.data || error.message);
     res.status(500).json({ error: error.response?.data || error.message });
   }
 });
 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });
