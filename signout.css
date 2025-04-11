@@ -70,7 +70,7 @@
 }
 .sign-out-page .back-to-login {
   position: absolute;
-  top: 820px; /* Adjusted to appear below the success message */
+  top: 880px; 
   left: 50%;
   transform: translateX(-50%);
   font-family: "Inter", sans-serif;
@@ -83,6 +83,7 @@
   border: 2px solid #ffffff;
   transition: background-color 0.3s, color 0.3s;
 }
+
 
 .sign-out-page .back-to-login:hover {
   background-color: #ffffff;
