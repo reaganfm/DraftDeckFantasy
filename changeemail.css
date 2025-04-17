@@ -1,4 +1,9 @@
-/* Page Background */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #16203d;
+}
+
 .change-email {
   background-color: #16203d;
   display: flex;
@@ -14,7 +19,6 @@
   position: relative;
 }
 
-/* Save New Email Button */
 .save-email-button {
   position: absolute;
   width: 394px;
@@ -99,7 +103,6 @@
   display: block;
 }
 
-/* Form Section */
 .change-email .text-wrapper-3 {
   position: absolute;
   top: 388px;
@@ -112,7 +115,6 @@
   line-height: normal;
 }
 
-/* Email Input Field */
 .email-input {
   position: absolute;
   top: 420px;
@@ -139,7 +141,6 @@
   box-shadow: 0 0 5px rgba(253, 163, 17, 0.5);
 }
 
-/* Label for Input Field */
 .change-email .text-wrapper-2 {
   position: absolute;
   top: 385px;
