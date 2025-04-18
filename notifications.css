@@ -1,14 +1,40 @@
 /* ── Base & Fluid Container ───────────────────────────────────────────────── */
 html, body {
-  margin: 0; padding: 0; height: 100%; background-color: #16203d;
+  margin: 0;
+  padding: 0;
+  height: 110%;
+
+  /* fallback solid color */
+  background-color: #16203d;
+
+  /* your gradient overlay */
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(8, 33, 107, 0.9),
+    rgba(29, 43, 86, 0.9),
+    rgba(12, 24, 61, 0.9),
+    rgba(32, 44, 80, 0.764),
+    rgba(9, 30, 93, 0.9)
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .notifications {
-  display: flex; justify-content: center; padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
 }
+
 .inner {
-  width: 100%; max-width: 1440px; margin: 0 auto;
-  position: relative; padding-top: 176px; color: #fff;
-  box-sizing: border-box; padding: 0 1rem;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 176px;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 0 1rem;
 }
 
 /* ── Header CSS (copied from home.css) ─────────────────────────────────── */
@@ -20,6 +46,7 @@ html, body {
   left: 0;
   z-index: 0;
 }
+
 .group {
   position: absolute;
   width: 1440px;
@@ -27,11 +54,13 @@ html, body {
   top: 0;
   left: 0;
 }
+
 .overlap-group-2 {
   position: relative;
   height: 325px;
   top: 155px;
 }
+
 .frame {
   position: absolute;
   width: 1440px;
@@ -41,6 +70,7 @@ html, body {
   background-color: #1b263c;
   box-shadow: 0px 4px 4px #00000040;
 }
+
 .image {
   position: absolute;
   width: 673px;
@@ -49,6 +79,7 @@ html, body {
   left: 384px;
   object-fit: cover;
 }
+
 .menu-bar {
   position: absolute;
   top: 180px;
@@ -57,6 +88,7 @@ html, body {
   align-items: center;
   justify-content: center;
 }
+
 .menu-bar .img {
   width: 100px;
   height: auto;
@@ -68,31 +100,43 @@ html, body {
   text-align: center;
   padding-top: 200px;
   font-family: "Inter-Bold", Helvetica;
-  font-size: 60px; font-weight: 700;
+  font-size: 60px;
+  font-weight: 700;
   margin: 1rem 0 0.5rem;
 }
+
 .status-container {
-  display: flex; justify-content: center; align-items: center;
-  gap: 1rem; margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
+
 .status {
   font-family: "Inter-Bold", Helvetica;
-  font-size: 20px; font-weight: 700;
+  font-size: 20px;
+  font-weight: 700;
   color: #4CAF50;
 }
+
 .refresh-btn {
-  background: rgba(255, 0, 0, 0); /* trasnparent */
+  background: rgba(255, 0, 0, 0);
   border: 2px solid #4CAF50;
   color: #4CAF50;
   font-family: "Inter-Bold", Helvetica;
-  font-size: 16px; padding: 0.4rem 0.8rem;
+  font-size: 16px;
+  padding: 0.4rem 0.8rem;
   z-index: 3;
-  border-radius: 4px; cursor: pointer;
+  border-radius: 4px;
+  cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
-  display: inline-block; /* Ensure it's treated as a block or inline-block */
+  display: inline-block;
 }
+
 .refresh-btn:hover {
-  background-color: #4CAF50; color: #fff;
+  background-color: #4CAF50;
+  color: #fff;
 }
 
 /* ── Stretchy, Full‑Height Boxes ────────────────────────────────────────── */
@@ -104,74 +148,104 @@ html, body {
   grid-auto-rows: 1fr;
   align-content: start;
 }
+
 .box {
-  border-radius: 16px; overflow: hidden;
+  border-radius: 16px;
+  overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.2s, box-shadow 0.2s;
-  display: flex; flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
 .box:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
+
 .box-header {
-  background-color: #fda311; padding: 1rem; text-align: center;
+  background-color: #fda311;
+  padding: 1rem;
+  text-align: center;
 }
+
 .box-header h3 {
   margin: 0;
   font-family: "Istok Web-Bold", Helvetica;
-  font-size: 32px; font-weight: 700;
+  font-size: 32px;
+  font-weight: 700;
   color: #16203d;
 }
+
 .box-body {
-  background-color: #d9d9d9; flex: 1;
-  display: flex; justify-content: center; align-items: center;
+  background-color: #d9d9d9;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
 }
+
 .empty {
   font-family: "Inter-Regular", Helvetica;
-  font-size: 16px; color: #000; margin: 0;
+  font-size: 16px;
+  color: #000;
+  margin: 0;
 }
 
 /* ── Responsive Tweaks ──────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .image {
-    top: -50px; width: 400px; max-width: 50%;
+    top: -50px;
+    width: 400px;
+    max-width: 50%;
   }
   .page-title { font-size: 40px; }
   .status { font-size: 18px; }
   .box-header h3 { font-size: 28px; }
 }
+
 @media (max-width: 768px) {
   .inner { padding-top: 200px; }
   .image {
-    top: -15px; width: 300px; max-width: 60%;
+    top: -15px;
+    width: 300px;
+    max-width: 60%;
   }
   .menu-bar { left: 10px; }
   .page-title { font-size: 36px; }
   .status { font-size: 16px; }
   .box-header h3 { font-size: 24px; }
 }
+
 @media (max-width: 480px) {
   .frame { height: 100px; }
   .inner { padding-top: 120px; }
   .image {
-    position: relative; top: 0; left: 50%;
+    position: relative;
+    top: 0;
+    left: 50%;
     transform: translateX(-50%);
-    width: 150px; max-width: 80%; margin-bottom: 1rem;
+    width: 150px;
+    max-width: 80%;
+    margin-bottom: 1rem;
   }
   .menu-bar {
-    position: absolute; top: 10px; left: auto; right: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
   .page-title { font-size: 28px; }
   .status { font-size: 14px; margin-bottom: 1.5rem; }
   .boxes {
     grid-template-columns: 1fr;
-    height: auto; gap: 1.5rem;
+    height: auto;
+    gap: 1.5rem;
   }
   .box-header h3 { font-size: 20px; }
   .empty { font-size: 14px; }
 }
+
 @keyframes spin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }

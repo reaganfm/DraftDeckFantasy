@@ -1,11 +1,10 @@
 html, body {
   height: 100%;
   margin: 0;
-  background-color: #16203d;
+  background-color: #16203d; /* fallback color */
 }
 
 .my-fantasy-team {
-  background-color: #16203d;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -13,10 +12,24 @@ html, body {
 }
 
 .my-fantasy-team .div {
-  background-color: #16203d;
   width: 1440px;
   height: 1024px;
   position: relative;
+
+  /* ▼ gradient overlay on top of photo ▼ */
+  background-image:
+    linear-gradient(
+      to bottom right,
+      rgba(8, 33, 107, 0.9),
+      rgba(29, 43, 86, 0.9),
+      rgba(12, 24, 61, 0.9),
+      rgba(32, 44, 80, 0.764),
+      rgba(9, 30, 93, 0.9)
+    ),
+    url("Images/footballfield.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .my-fantasy-team .overlap {
@@ -137,7 +150,7 @@ html, body {
 
 .my-fantasy-team .menu-bar img {
   width: 100px;
-  height: auto; 
+  height: auto;
   display: block;
 }
 

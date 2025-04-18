@@ -7,7 +7,18 @@ html, body {
   background-color: #16203d;
 }
 .help-FAQ-page { display: flex; justify-content: center; width: 100%; }
-.help-FAQ-page .div { width: 1440px; position: relative; background-color: #16203d; }
+.help-FAQ-page .div { width: 1440px; position: relative; /* fallback solid color */
+  background-color: #16203d;
+
+  /* your gradient overlay */
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(8, 33, 107, 0.9),
+    rgba(29, 43, 86, 0.9),
+    rgba(12, 24, 61, 0.9),
+    rgba(32, 44, 80, 0.764),
+    rgba(9, 30, 93, 0.9)
+  ); }
 
 /* Header bar, logo, and title */
 .overlap-group {
@@ -55,7 +66,7 @@ html, body {
   max-width: 1158px; margin: 0 auto 2rem;
 }
 .content-section {
-  background-color: #1b263c; border-radius: 8px; margin-bottom: 1rem; overflow: hidden;
+  background-color: #39548f; border-radius: 8px; margin-bottom: 1rem; overflow: hidden;
 }
 .content-section summary {
   padding: 1rem 1.5rem;

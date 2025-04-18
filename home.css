@@ -1,3 +1,4 @@
+/* home.css */
 .home-page {
   background-color: #16203d;
   display: flex;
@@ -7,12 +8,46 @@
 }
 
 .home-page .div {
-  background-color: #16203d;
-  overflow: hidden;
+  position: relative;
   width: 1440px;
   height: 1024px;
-  position: relative;
+  overflow: hidden;
+  /* no background-image here any more */
 }
+
+/* --- Layer 1: your football field photo with reduced opacity --- */
+.home-page .div::before {
+  content: "";
+  position: absolute;
+  inset: 0;   /* top:0; right:0; bottom:0; left:0; */
+  background: url("Images/footballfield.jpeg") center/cover no-repeat;
+  opacity: .5;   /* ← Lower this to taste (0 = invisible, 1 = fully opaque) */
+  z-index: 0;
+}
+
+/* --- Layer 2: your gradient overlay, full strength over the faded image --- */
+.home-page .div::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(8, 33, 107, 0.9),
+    rgba(29, 43, 86, 0.9),
+    rgba(12, 24, 61, 0.9),
+    rgba(32, 44, 80, 0.764),
+    rgba(9, 30, 93, 0.9)
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --- Make sure your text/icons sit on top of both layers --- */
+.home-page .div > * {
+  position: relative;
+  z-index: 2;
+}
+
 
 .home-page .overlap {
   position: absolute;
@@ -217,24 +252,8 @@
   display: block;
 }
 
-.home-page .line {
-  top: 39px;
-  position: absolute;
-  width: 59px;
-  height: 14px;
-  left: 36px;
-}
-
 .home-page .img {
   top: 57px;
-  position: absolute;
-  width: 59px;
-  height: 14px;
-  left: 36px;
-}
-
-.home-page .line-2 {
-  top: 74px;
   position: absolute;
   width: 59px;
   height: 14px;
@@ -288,18 +307,17 @@
   border-radius: 60px;
 }
 
-.home-page .text-wrapper-6 {
+.home-page .search-input {
   position: absolute;
-  width: 265px;
-  top: 14px;
-  left: 113px;
-  font-family: "Inter-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 64px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
+  top: 10px;
+  left: 110px;
+  width: 600px;
+  height: 80px;
+  font-size: 40px;
+  border-radius: 20px;
+  padding-left: 20px;
+  border: 2px solid #ccc;
+  z-index: 10;
 }
 
 .home-page .search {
@@ -315,64 +333,39 @@
   height: 104px;
   top: 0;
   border-radius: 60px;
-  border: 3px solid;
-  border-color: #979797;
+  border: 3px solid #979797;
   position: absolute;
   left: 0;
 }
 
-.home-page .filter {
-  position: absolute;
-  width: 72px;
-  height: 72px;
-  top: 18px;
-  left: 754px;
+/* --------------- HOVER POP‑OUT + GLOW --------------- */
+
+/* Make each card container hover‑able and animatable */
+.home-page .overlap,
+.home-page .overlap-group,
+.home-page .overlap-2,
+.home-page .overlap-3{
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-origin: center center;
 }
 
-/* Filter Menu Styles */
-#filter-menu {
-  position: absolute;
-  top: 98px; /* Adjust to be directly below the filter icon */
-  right: 22px; /* Aligned with the right edge of the filter icon */
-  background: white;
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 15px;
-  box-shadow: 0 12px 10px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-  color: #000000; 
+/* On hover: lift + glow */
+.home-page .overlap:hover,
+.home-page .overlap-group:hover,
+.home-page .overlap-2:hover,
+.home-page .overlap-3:hover {
+transform: translateY(-8px) scale(1.05);
+border-radius: 60px;
 }
 
-#filter-menu p {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-#filter-menu label {
+/* Ensure the <a> fills its parent so hover is anywhere */
+.home-page .overlap > a,
+.home-page .overlap-group > a,
+.home-page .overlap-2 > a,
+.home-page .overlap-3 > a {
   display: block;
-  margin-bottom: 5px;
-}
-
-#filter-menu input[type="checkbox"] {
-  margin-right: 5px;
-}
-
-/* Style the filter button to make it clickable */
-.filter {
-    cursor: pointer;
-}
-
-.search-input {
-  position: absolute;
-  top: 10px;
-  left: 110px;
-  width: 600px;
-  height: 80px;
-  font-size: 40px;
-  border-radius: 20px;
-  padding-left: 20px;
-  border: 2px solid #ccc;
-  z-index: 10;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
 }
