@@ -85,6 +85,10 @@ body {
   margin-bottom: 5px;
 }
 
+p {
+  color:#ffffff;
+}
+
 /* Input fields */
 .input-field {
   width: calc(100% - 27px); 
