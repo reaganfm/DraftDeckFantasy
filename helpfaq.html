@@ -1,108 +1,184 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="helpfaq.css" />
-    <link rel="stylesheet" href="menu.css" />
-  </head>
-  <body>
-    <div class="help-FAQ-page">
-      <div class="div">
-        <div class="overlap-group">
-          <div class="frame"></div>
-          <a href="home.html"><img class="image" src="Images/draftdecklogo2.png" alt="Go to Home"/> </a>
-          <p class="how-to-use-draftdeck">
-            <span class="text-wrapper">How to Use DraftDeck Fantasy and Play Fantasy Football<br /></span>
-            <span class="span"
-              >Welcome to DraftDeck! This guide will help you understand how to use our platform and enjoy the exciting
-              world of fantasy football. If you have further questions, feel free to contact us through
-              the Support tab.</span
-            >
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="helpfaq.css" />
+  <link rel="stylesheet" href="menu.css" />
+  <title>DraftDeck Help &amp; FAQ</title>
+</head>
+<body>
+  <div class="help-FAQ-page">
+    <div class="div">
+      <div class="overlap-group">
+        <div class="frame"></div>
+        <a href="home.html">
+          <img class="image" src="Images/draftdecklogo2.png" alt="Go to Home" />
+        </a>
+        <h1 class="help-FAQ">User Guide</h1>
+        <section class="intro">
+          <p>
+            <strong>Welcome to DraftDeck Fantasy</strong>, where the strategy
+            of fantasy football meets the thrill of trading cards. This guide
+            will walk you through all the key features and how to use the site
+            effectively.
           </p>
-          <div class="help-FAQ">Help &amp; FAQ</div>
-          <!-- Reusable Menu Placeholder -->
-<div id="menu-placeholder"></div>
+        </section>
+        <div class="toggle-container">
+          <button id="toggleAll">Show All</button>
         </div>
-        <p class="getting-started-sign">
-          Getting Started<br />
-          1. Sign Up:<br /> Create a free account with your email or connect via Google.<br />
-          2. Join a League:<br />Click &#34;Join a League&#34; to find a public league or enter a private league code sent by your
-          friends.<br />Alternatively, create your own league and invite others to join!<br />
-          3. Draft Your Team:<br />Participate
-          in the live draft to select players for your team.<br />Use player profiles styled as trading cards to compare
-          stats and insights.
-        </p>
-        <div class="overlap">
-          <p class="faqs-q-can-i-play-if">
-            <span class="text-wrapper">FAQs<br />Q: Can I play if I’m new to fantasy football?</span>
-            <span class="span"
-              >A: Absolutely! DraftDeck is designed for beginners and seasoned players alike. Our trading card-style
-              player profiles make it easy to understand stats and performance.<br
-            /></span>
-            <span class="text-wrapper"><br />Q: How do I find free agents or make trades?</span>
-            <span class="span"
-              >A: Navigate to the Player Market tab to view free agents or propose trades to other players. Use filters
-              to search by position, performance, or availability.<br
-            /></span>
-            <span class="text-wrapper"><br />Q: What happens if a player on my team gets injured?</span>
-            <span class="span"
-              >A: Injured players can be moved to the Injured Reserve (IR) spot on your roster. Replace them by picking
-              up a free agent or making a trade.<br
-            /></span>
-            <span class="text-wrapper"><br />Q: How do scoring rules work?</span>
-            <span class="span"
-              >A: Scoring varies by league, but typical points are awarded for actions like touchdowns, yards gained,
-              and receptions. Check your league’s specific rules under the Scoring Settings tab.<br
-            /></span>
-          </p>
-          <p class="how-to-play-set-your">
-            How to Play<br />
-            1. Set Your Lineup:<br />
-            Choose players to start each week. Drag and drop trading cards to
-            fill positions like quarterback, running back, and wide receiver.<br />Keep an eye on player injuries or bye
-            weeks!<br />
-            2. Score Points:<br />Your players earn points based on their real-life performance in games (e.g.,
-            touchdowns, rushing yards).<br />Monitor live scores through our Game Tracker.<br />
-            3. Make Trades and
-            Pickups:<br />Trade players with others in your league or add free agents to improve your roster.<br />
-            4. Compete
-            Weekly:<br />Face off against other league members. The team with the most points wins the matchup.<br />
-            5. Win
-            the League:<br />At the end of the season, the team with the best record or highest playoff performance is
-            crowned champion.
-          </p>
-        </div>
+        <main class="faq-content">
+
+          <details class="content-section">
+            <summary>Getting Started</summary>
+            <div class="detail-content">
+              <h3>Sign Up</h3>
+              <ul class="level-1">
+                <li>Enter your <strong>email</strong></li>
+                <li>Choose a <strong>username</strong> and <strong>password</strong></li>
+                <li>You’ll have <strong>full access</strong> right after signing up</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="content-section">
+            <summary>Player Cards &amp; League Setup</summary>
+            <div class="detail-content">
+              <h3>What You Can Do</h3>
+              <ul class="level-1">
+                <li>Add player cards to your league</li>
+                <li>View live <strong>stats</strong>, scores, schedules, and updates</li>
+                <li>Manage your <strong>account info</strong> and profile</li>
+              </ul>
+              <h3>Card Limits</h3>
+              <ul class="level-1">
+                <li>You can hold up to <strong>9 cards</strong></li>
+                <li>No duplicate cards—only one of each player per user</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="content-section">
+            <summary>Player Card Details</summary>
+            <div class="detail-content">
+              <h3>Front Includes</h3>
+              <ul class="level-1">
+                <li><strong>Player Name</strong></li>
+                <li>Team Logo</li>
+                <li>Position</li>
+                <li>Jersey Number</li>
+              </ul>
+              <h3>Back Includes</h3>
+              <ul class="level-1">
+                <li>Height &amp; Weight</li>
+                <li><strong>Career Total Stats</strong></li>
+                <li>Short player bio &amp; key achievements</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="content-section">
+            <summary>Navigating the Site</summary>
+            <div class="detail-content">
+              <ul class="level-1">
+                <li><strong>Home Page</strong> – Dashboard, notifications, About Us, Settings</li>
+                <li><strong>Team List</strong> – Your lineup & drafted cards</li>
+                <li><strong>Player List</strong> – Browse all cards with full stats</li>
+                <li><strong>Weekly Matchups</strong> – See how your team stacks up</li>
+                <li><strong>League Standings</strong> – Track overall performance</li>
+                <li><strong>League Schedule</strong> – Upcoming NFL games relevant to your cards</li>
+                <li><strong>News / Messages</strong> – Latest updates & announcements</li>
+                <li><strong>Settings</strong> – Update email, username, password, or sign out</li>
+                <li><strong>Account Page</strong> – View your full collection and change your avatar</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="content-section">
+            <summary>Pro Tips</summary>
+            <div class="detail-content">
+              <ul class="level-1">
+                <li><strong>Monitor Stats</strong>: Keep an eye on player performance</li>
+                <li><strong>Manage Cards</strong>: Remember your 9‑card limit—drop one to add another</li>
+                <li><strong>Quick Navigation</strong>: Use bright orange buttons to move around</li>
+                <li><strong>Customize</strong>: Update your profile for a personal touch</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="content-section">
+            <summary>FAQs</summary>
+            <div class="detail-content">
+              <dl class="faq-list">
+                <dt>Q: Can I invite friends to my league?</dt>
+                <dd>A: Not yet—only individual leagues are supported (multiplayer coming soon).</dd>
+                <dt>Q: How do I trade or remove cards?</dt>
+                <dd>A: You must remove one card to add another. Full trading features are on the roadmap.</dd>
+                <dt>Q: Can I update my account info?</dt>
+                <dd>A: Yes—go to Settings to change your username, email, or password.</dd>
+                <dt>Q: How do I change my profile picture?</dt>
+                <dd>A: On the Account Page, upload a new image from your device.</dd>
+              </dl>
+            </div>
+          </details>
+
+          <details class="content-section">
+            <summary>Need Help?</summary>
+            <div class="detail-content">
+              <p>
+                If you run into issues, revisit this section or email us at
+                <a href="mailto:support@draftdeckfantasy.com"><strong>support@draftdeckfantasy.com</strong></a>.
+              </p>
+            </div>
+          </details>
+
+          <details class="content-section">
+            <summary>Download the Training Guide (PDF)</summary>
+            <div class="detail-content">
+              <p>
+                <a
+                  href="Documents/draftdeckfantasytrainingguide.pdf"
+                  target="_blank"
+                  class="pdf-link"
+                >📄 View or download the <strong>Training Guide</strong></a>
+              </p>
+            </div>
+          </details>
+
+        </main>
+        <div id="menu-placeholder"></div>
       </div>
     </div>
-    <!-- Load and activate the reusable menu -->
-<script>
-  fetch("menu.html")
-    .then((res) => res.text())
-    .then((data) => {
-      document.getElementById("menu-placeholder").innerHTML = data;
+  </div>
 
-      // Reattach menu functionality after it's loaded
-      const menuIcon = document.getElementById("menu-icon");
-      const menu = document.getElementById("menu");
-
-      menuIcon.addEventListener("click", function (event) {
-        event.stopPropagation();
-        menu.style.display = menu.style.display === "block" ? "none" : "block";
-      });
-
-      document.addEventListener("click", function (event) {
-        if (!menu.contains(event.target) && event.target !== menuIcon) {
-          menu.style.display = "none";
-        }
-      });
-
-      document.querySelectorAll("#menu a").forEach((link) => {
-        link.addEventListener("click", function () {
-          menu.style.display = "none";
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("menu-placeholder").innerHTML = data;
+        const icon = document.getElementById("menu-icon"),
+              menu = document.getElementById("menu");
+        icon.addEventListener("click", e => {
+          e.stopPropagation();
+          menu.style.display = menu.style.display === "block" ? "none" : "block";
         });
+        document.addEventListener("click", e => {
+          if (!menu.contains(e.target) && e.target !== icon) {
+            menu.style.display = "none";
+          }
+        });
+        document.querySelectorAll("#menu a").forEach(link =>
+          link.addEventListener("click", () => menu.style.display = "none")
+        );
       });
+
+    const toggleBtn = document.getElementById("toggleAll");
+    toggleBtn.addEventListener("click", () => {
+      const all = document.querySelectorAll("details");
+      const anyClosed = Array.from(all).some(d => !d.open);
+      all.forEach(d => d.open = anyClosed);
+      toggleBtn.textContent = anyClosed ? "Collapse All" : "Show All";
     });
-</script>
-  </body>
+  </script>
+</body>
 </html>
