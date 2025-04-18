@@ -1,7 +1,7 @@
 /* myfantasyteam.css */
 
 html, body {
-  height: 100%;
+  height: auto;
   margin: 0;
   background-color: #16203d; /* fallback color */
 }
@@ -11,6 +11,7 @@ html, body {
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  min-height: 100vh;
 }
 
 .my-fantasy-team .div {
@@ -38,7 +39,7 @@ html, body {
   position: absolute;
   width: 1282px;
   height: 410px;
-  top: 539px;
+  top: 589px; /* Adjusted to be closer to the nav bar */
   left: 94px;
 }
 
@@ -107,7 +108,7 @@ html, body {
 .my-fantasy-team .overlap-group {
   position: absolute;
   width: 1440px;
-  height: 325px;
+  height: 420px; /* Adjusted height */
   top: 0;
   left: 0;
 }
@@ -115,7 +116,7 @@ html, body {
 .my-fantasy-team .text-wrapper-2 {
   position: absolute;
   width: 829px;
-  top: 201px;
+  top: 340px; /* Moved up to create space below the logo */
   left: 310px;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 800;
@@ -129,7 +130,7 @@ html, body {
 .my-fantasy-team .frame {
   position: absolute;
   width: 1440px;
-  height: 176px;
+  height: 199px;
   top: 0;
   left: 0;
   background-color: #1b263c;
@@ -141,10 +142,40 @@ html, body {
   position: absolute;
   width: 673px;
   height: 325px;
-  top: -75px;
+  top: -55px; /* Adjusted position relative to the header */
   left: 384px;
   object-fit: cover;
   z-index: 3;
+}
+
+.floating-logo-wrapper {
+  position: absolute;
+  top: 215px; /* Adjusted vertical position within the header */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.spinning-logo {
+  width: 120px;
+  height: auto;
+  animation: medal-flip-spin 4s ease-in-out 0.4, /* Initial flip once */
+             medal-spin 3s linear infinite 2s;   /* Continuous spin after 2s delay */
+}
+
+@keyframes medal-flip-spin { /* Keyframes for the initial flip */
+  0% { transform: rotateY(90deg); opacity: 0; }
+  30% { transform: rotateY(0deg); opacity: 1; }
+  100% { transform: rotateY(0deg); opacity: 1; } /* Hold at the final flipped position */
+}
+
+@keyframes medal-spin { /* Keyframes for the continuous spin (same as Option 1) */
+  0% { transform: rotateY(0deg); }
+  25% { transform: rotateY(90deg); }
+  50% { transform: rotateY(180deg); }
+  75% { transform: rotateY(270deg); }
+  100% { transform: rotateY(360deg); }
 }
 
 /* Hamburger-menu icon (from menu.html) */
@@ -178,7 +209,7 @@ html, body {
   position: absolute;
   width: calc(100% - 214px);
   max-width: 1226px;
-  top: 340px;
+  top: 450px; /* Moved up to be closer to "My Fantasy Team" */
   left: 107px;
   display: flex;
   justify-content: center;
@@ -191,8 +222,8 @@ html, body {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding: 20px 30px;     /* ← taller bar */
-  min-height: 70px;       /* ← never smaller than this */
+  padding: 20px 30px;
+  min-height: 70px;
   background: linear-gradient(
     145deg,
     rgba(53, 77, 133, 0.405),
@@ -212,12 +243,9 @@ html, body {
   color: #e0e0e0;
   text-decoration: none;
   font-family: "Inter-Regular", Helvetica, sans-serif;
-  /* Increased font size */
-  font-size: 22px; /* UPDATED */
-  /* Made font bold */
-  font-weight: 700; /* UPDATED */
-  /* Increased padding for more space around text */
-  padding: 20px 25px; /* UPDATED */
+  font-size: 22px;
+  font-weight: 700;
+  padding: 20px 25px;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
   position: relative;
