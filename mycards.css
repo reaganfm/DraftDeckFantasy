@@ -9,6 +9,17 @@ html, body {
   display: flex;
   justify-content: center;
   width: 100%;
+  background-color: #16203d;
+
+/* your gradient overlay */
+background-image: linear-gradient(
+  to bottom right,
+  rgba(8, 33, 107, 0.9),
+  rgba(29, 43, 86, 0.9),
+  rgba(12, 24, 61, 0.9),
+  rgba(32, 44, 80, 0.764),
+  rgba(9, 30, 93, 0.9)
+);
 }
 
 .overlap-wrapper {
@@ -32,7 +43,8 @@ html, body {
 
 .text-wrapper {
   font-family: "Inter-Regular", Helvetica;
-  font-size: 28px;
+  font-size: 45px;
+  font-weight: bold;
   color: #ffffff;
   text-align: center;
   flex-grow: 1;

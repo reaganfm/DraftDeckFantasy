@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="match.css" />
     <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="mainnav.css" />
   </head>
   <body>
     <div class="match">
@@ -17,18 +18,18 @@
           <div class="text-wrapper-2">Team 2</div>
           <div class="element-2">125.82</div>
         </div>
-        <div class="overlap-2">
+        <div class="header-container">
+          <div class="overlap-2">
           <div class="text-wrapper-3">Week 2 Match Up</div>
           <div class="frame"></div>
           <a href="home.html"><img class="image" src="Images/draftdecklogo2.png" alt="Go to Home"/> </a>
-          <div class="rectangle"></div>
-          <div class="rectangle-2"></div>
-          <div class="text-wrapper-4">Match</div>
-          <a href="teamlist.html"><div class="text-wrapper-5">Team List</div></a>
-          <a href="playerlist.html"><div class="text-wrapper-6">Player list</div></a>
-          <a href="league.html"><div class="text-wrapper-7">League</div></a>
-          <a href="schedule.html"><div class="text-wrapper-8">Schedule</div></a>
-          <a href="draftroom.html"><div class="text-wrapper-9">Draftroom</div></a>
+        </div>
+        
+        <!-- ✅ Move this OUTSIDE so it flows normally -->
+        <div class="nav-wrapper">
+          <div id="mainnav-placeholder"></div>
+        </div>
+      </div>       
          <!-- Reusable Menu Placeholder -->
 <div id="menu-placeholder"></div>
         </div>
@@ -168,6 +169,22 @@
         });
       });
     });
+</script>
+<script>
+  fetch("mainnav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("mainnav-placeholder").innerHTML = data;
+
+      // Highlight the current page
+      const currentPage = window.location.pathname.split("/").pop();
+      document.querySelectorAll(".main-nav a").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    })
+    .catch(error => console.error('Error loading mainnav:', error));
 </script>
   </body>
 </html>

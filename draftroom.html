@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="draftroom.css" />
     <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="mainnav.css" />
     <script src="menu.js" defer></script>
   </head>
 
@@ -22,18 +23,10 @@
               alt="Go to Home"
             />
           </a>
-          <div class="rectangle"></div>
-          <div class="rectangle-2"></div>
-          <a href="match.html"><div class="text-wrapper">Match</div></a>
-          <a href="teamlist.html"
-            ><div class="text-wrapper-2">Team List</div></a
-          >
-          <a href="playerlist.html"
-            ><div class="text-wrapper-3">Player list</div></a
-          >
-          <a href="league.html"><div class="text-wrapper-4">League</div></a>
-          <a href="schedule.html"><div class="text-wrapper-5">Schedule</div></a>
-          <div class="text-wrapper-6">Draftroom</div>
+          <div class="nav-wrapper">
+            <div id="mainnav-placeholder"></div>
+          </div>
+        </div>   
           <!-- Reusable Menu Placeholder -->
 <div id="menu-placeholder"></div>
         </div>
@@ -310,6 +303,22 @@
         });
       });
     });
+</script>
+<script>
+  fetch("mainnav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("mainnav-placeholder").innerHTML = data;
+
+      // Highlight the current page
+      const currentPage = window.location.pathname.split("/").pop();
+      document.querySelectorAll(".main-nav a").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    })
+    .catch(error => console.error('Error loading mainnav:', error));
 </script>
   </body>
 </html>

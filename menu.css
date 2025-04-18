@@ -5,13 +5,15 @@
   background-color: rgba(255, 255, 255, 0.699);
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: -10px 10px 7px rgba(0, 0, 0, 0.2);
   z-index: 100;
   font-family: Arial, sans-serif;
   font-weight: normal;
   font-size: 25px;
   text-align: right;
   color: #5a5a5a;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   display: none;
 }
 
@@ -32,4 +34,20 @@
 
 .menu-container a:last-child {
   border-bottom: none;
+}
+.menu-bar {
+  position: fixed; /* Keep it in a fixed position */
+  top: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 101; /* Ensure it's above the menu */
+  cursor: pointer; /* Indicate it's clickable */
+  padding: 1px; /* Add some padding for touch/click area */
+  background: none; /* Remove any default background */
+  border: none; /* Remove any default border */
+}
+
+.menu-bar img#menu-icon {
+  width: 115px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure it behaves like a block-level element */
 }

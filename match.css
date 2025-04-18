@@ -108,12 +108,12 @@ html, body {
   line-height: normal;
 }
 
-.match .overlap-2 {
-  position: absolute;
-  width: 1440px;
-  height: 419px;
-  top: 0;
-  left: 0;
+.header-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px; /* spacing after the logo/nav if needed */
 }
 
 .match .text-wrapper-3 {
@@ -146,42 +146,6 @@ html, body {
   top: -75px;
   left: 384px;
   object-fit: cover;
-}
-
-.match .rectangle {
-  position: absolute;
-  width: 1226px;
-  height: 142px;
-  top: 201px;
-  left: 107px;
-  background-color: #788daa;
-  border-radius: 10px;
-  border: 10px solid;
-  border-color: #fda311;
-}
-
-.match .rectangle-2 {
-  position: absolute;
-  width: 194px;
-  height: 142px;
-  top: 201px;
-  left: 117px;
-  background-color: #fda310;
-}
-
-.match .text-wrapper-4 {
-  position: absolute;
-  width: 204px;
-  height: 142px;
-  top: 250px;
-  left: 107px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 32px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
 }
 
 .match .text-wrapper-5 {

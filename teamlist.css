@@ -251,129 +251,19 @@ background-image: linear-gradient(
   object-fit: cover;
 }
 
-.team-list .rectangle-2 {
-  position: absolute;
-  width: 1226px;
-  height: 142px;
-  top: 356px;
-  left: 107px;
-  background-color: #788daa;
-  border-radius: 10px;
-  border: 10px solid;
-  border-color: #fda311;
-}
-
-.team-list .rectangle-3 {
-  position: absolute;
-  width: 199px;
-  height: 142px;
-  top: 356px;
-  left: 311px;
-  background-color: #fda310;
-}
-
-.team-list .text-wrapper-7 {
-  position: absolute;
-  width: 204px;
-  height: 142px;
-  top: 405px;
-  left: 107px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 32px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.team-list .text-wrapper-8 {
-  position: absolute;
-  width: 199px;
-  height: 142px;
-  top: 405px;
-  left: 311px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 32px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.team-list .text-wrapper-9 {
-  width: 212px;
-  height: 142px;
-  top: 405px;
-  left: 510px;
-  color: #000000;
-  position: absolute;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  font-size: 32px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.team-list .text-wrapper-10 {
-  position: absolute;
-  width: 185px;
-  height: 142px;
-  top: 405px;
-  left: 722px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 32px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.team-list .text-wrapper-11 {
-  position: absolute;
-  width: 201px;
-  height: 142px;
-  top: 405px;
-  left: 907px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 32px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.team-list .text-wrapper-12 {
-  position: absolute;
-  width: 225px;
-  height: 142px;
-  top: 405px;
-  left: 1108px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 32px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
 .team-list .menu-bar {
   position: absolute;
-  top: 182px;
-  left: 1286px;
+  top: 18px;
+  width: 10px;
+  left: 1200px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .team-list .menu-bar .menu-img {
-  width: 100px;
-  height: auto; 
+  width: 40px;
+  height: auto;
   display: block;
 }
 
@@ -570,3 +460,11 @@ background-image: linear-gradient(
   position: absolute;
   object-fit: cover;
 }
+.header-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px; /* Optional: adds space below nav */
+}
+
