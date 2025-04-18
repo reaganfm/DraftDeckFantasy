@@ -1,75 +1,91 @@
-<!-- Removed: 
-<img class="screenshot" src="Images/news.svg" />
-<img class="img" src="Images/messages.svg" />
--->
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Notifications</title>
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="notifications.css" />
-    <link rel="stylesheet" href="menu.css" />
-    <script src="menu.js" defer></script>
-  </head>
-  <body>
-    <div class="notifications">
-      <div class="overlap-wrapper">
-        <div class="overlap">
-          <div class="rectangle"></div>
-          <div class="frame"></div>
-          <div class="div"></div>
-          <div class="rectangle-2"></div>
-          <div class="rectangle-3"></div>
-          <div class="rectangle-4"></div>
-          <div class="rectangle-5"></div>
-          <div class="rectangle-6"></div>
-          <div class="rectangle-7"></div>
-          <div class="rectangle-8"></div>
-          <div class="text-wrapper">Messages</div>
-          <div class="text-wrapper-2">News</div>
-          <div class="text-wrapper-3">Team</div>
-          <div class="text-wrapper-4">Deadlines</div>
+<head>
+  <meta charset="utf-8" />
+  <!-- Make it responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notifications</title>
 
-          <div class="group">
-            <div class="overlap-group">
-            </div>
-          </div>
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="notifications.css" />
+  <link rel="stylesheet" href="menu.css" />
 
-          
+  <!-- Main menu script -->
+  <script src="menu.js" defer></script>
+  <!-- Refresh logic -->
+  <script src="notifications.js" defer></script>
+</head>
+<body>
+  <div class="notifications">
+    <div class="inner">
 
-          <div class="frame-2"></div>
-          <a href="home.html"
-            ><img
-              class="image"
-              src="Images/draftdecklogo2.png"
-              alt="Go to Home"
-          /></a>
-
-          <!-- Hamburger -->
-          <div class="menu-bar">
-            <img
-              id="menu-icon"
-              class="menu-img"
-              src="Images/hamburger_menu.png"
-              alt="Menu"
-            />
-          </div>
-
-          <!-- Dropdown menu -->
-          <div id="menu" class="menu-container">
-            <a href="home.html">Home</a>
-            <a href="myfantasyteam.html">My Fantasy Team</a>
-            <a href="helpfaq.html">Help/FAQ</a>
-            <a href="notifications.html">Notifications</a>
-            <a href="settings.html">Settings</a>
-            <a href="about.html">About</a>
-            <a href="account.html">Account</a>
-            <a href="signout.html">Sign Out</a>
+      <!-- ── Header (copied from home.html) ───────────────────────────────── -->
+      <div class="overlap-4">
+        <div class="group">
+          <div class="overlap-group-2">
+            <div class="frame"></div>
+            <a href="home.html">
+              <img class="image" src="Images/draftdecklogo2.png" alt="Go to Home"/>
+            </a>
           </div>
         </div>
+
+        <div class="menu-bar">
+          <img
+            id="menu-icon"
+            class="img"
+            src="Images/hamburger_menu.png"
+            alt="Menu"
+          />
+        </div>
+
+        <div id="menu" class="menu-container">
+          <a href="home.html">Home</a>
+          <a href="myfantasyteam.html">My Fantasy Team</a>
+          <a href="helpfaq.html">Help/FAQ</a>
+          <a href="notifications.html">Notifications</a>
+          <a href="settings.html">Settings</a>
+          <a href="about.html">About</a>
+          <a href="account.html">Account</a>
+          <a href="signout.html">Sign Out</a>
+        </div>
       </div>
+      <!-- ── End Header ───────────────────────────────────────────────────── -->
+
+      <!-- Title, status, and refresh -->
+      <h1 class="page-title">Notifications</h1>
+      <div class="status-container">
+        <div class="status">✔ All Caught Up</div>
+        <button
+  id="refresh-btn"
+  class="refresh-btn"
+  type="button"
+>
+  <span id="refresh-icon">↻</span> Refresh
+</button>
+      </div>
+
+      <!-- Responsive grid of boxes -->
+      <div class="boxes">
+        <div class="box">
+          <div class="box-header"><h3>Messages</h3></div>
+          <div class="box-body"><p class="empty">No Updates</p></div>
+        </div>
+        <div class="box">
+          <div class="box-header"><h3>News</h3></div>
+          <div class="box-body"><p class="empty">No Updates</p></div>
+        </div>
+        <div class="box">
+          <div class="box-header"><h3>Team</h3></div>
+          <div class="box-body"><p class="empty">No Updates</p></div>
+        </div>
+        <div class="box">
+          <div class="box-header"><h3>Deadlines</h3></div>
+          <div class="box-body"><p class="empty">No Updates</p></div>
+        </div>
+      </div>
+
     </div>
-  </body>
+  </div>
+</body>
 </html>

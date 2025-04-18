@@ -33,7 +33,7 @@ html, body {
   font-family: "Inter-Regular", Helvetica; font-size: 36px; line-height: 60px; color: #fff;
 }
 .menu-bar {
-  position: absolute; top: -30px; left: 1250px;
+  position: absolute; top: 25px; left: 1250px;
   display: flex; align-items: center; justify-content: center;
 }
 .menu-bar img { width: 100px; display: block; }
