@@ -2,21 +2,31 @@ document.addEventListener("DOMContentLoaded", async () => {
   const input = document.getElementById("playerSearch");
   const container = document.getElementById("searchResults");
 
-  async function fetchPlayer(q) {
-    if (!q) {
-      container.innerHTML = "";
-      return;
-    }
+  const API_BASE_URL = "https://students.gaim.ucf.edu/~re061026/dig4172c/DraftDeck%20Fantasy";
 
-    try {
-      const res = await fetch(`/api/search-player?q=${encodeURIComponent(q)}`);
-      const data = await res.json();
-      renderResults(data.results || []);
-    } catch (err) {
-      console.error("Fetch error:", err);
-      container.innerHTML = "<p style='color:white; text-align:center;'>Error loading data.</p>";
-    }
+// search.js (replace fetchPlayer)
+async function fetchPlayer(q) {
+  if (!q) {
+    container.innerHTML = "";
+    return;
   }
+  try {
+    // Load the static JSON file
+    const res = await fetch("PlayersByAvailable.json");
+    const all = await res.json();
+    // Filter client‑side
+    const results = all.filter(p =>
+      (p.Name   || "").toLowerCase().includes(q) ||
+      (p.FirstName || "").toLowerCase().includes(q) ||
+      (p.LastName  || "").toLowerCase().includes(q)
+    );
+    renderResults(results);
+  } catch (err) {
+    console.error("Error loading player data:", err);
+    container.innerHTML = "<p style='color:white;text-align:center;'>Error loading data.</p>";
+  }
+}
+
 
   const urlParams = new URLSearchParams(window.location.search);
   const query = urlParams.get("q");
